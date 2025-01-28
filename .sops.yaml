@@ -1,0 +1,9 @@
+keys:
+    # AGE
+    - &chengcheng_0v0 age1v35c8pstlm756dj5dsyu0qf7em8vcj4hsxc7cl26n43cmrzgyfyq0zj66v
+
+creation_rules:
+    - path_regex: secrets/[^/]+\.(yaml|json|env|ini|nix)$
+      key_groups:
+          - age:
+                - *chengcheng_0v0
