@@ -8,20 +8,20 @@
     desktop = name: ./desktop/${name};
     program = name: ./programs/${name};
   in [
-    ./packages.nix # 用户软件包
+    ./packages.nix            # 用户软件包
 
-    (desktop "desktop-file") # 自定义的 .desktop 文件
-    (desktop "wallpaper") # 好康的壁纸 (纯图片)
-    (desktop "hypr") # Hyprland (混成器/窗口管理器)
-    (desktop "waybar") # Waybar (状态栏)
-    (desktop "fcitx5") # Fcitx5 (输入法)
+    (desktop "desktop-file")  # 自定义的 .desktop 文件
+    (desktop "wallpaper")     # 好康的壁纸 (纯图片)
+    (desktop "hypr")          # Hyprland (混成器/窗口管理器)
+    (desktop "waybar")        # Waybar (状态栏)
+    (desktop "fcitx5")        # Fcitx5 (输入法)
 
-    (program "kitty") # Kitty (终端模拟器)
-    (program "fish") # Fish (交互式 Shell)
-    (program "nvim") # Neovim (代码编辑器)
-    (program "yazi") # Yazi (文件管理器)
-    (program "lazygit") # LazyGit (Git TUI)
-    (program "prettier") # Prettier (前端格式化工具)
+    (program "kitty")         # Kitty (终端模拟器)
+    (program "fish")          # Fish (交互式 Shell)
+    (program "nvim")          # Neovim (代码编辑器)
+    (program "yazi")          # Yazi (文件管理器)
+    (program "lazygit")       # LazyGit (Git TUI)
+    (program "prettier")      # Prettier (前端格式化工具)
   ];
 
   # Git
