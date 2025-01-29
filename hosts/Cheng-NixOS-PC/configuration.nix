@@ -5,10 +5,14 @@
   networking.hostName = "Cheng-NixOS-PC";
 
   imports = [
-    ./hardware-configuration.nix # 硬件配置
-    ./fhs-environment.nix # FHS 环境
-    ./users.nix # 用户配置
-    ./packages.nix # 系统软件包
+    ./hardware-configuration.nix  # 硬件配置
+
+    ./users.nix                   # 用户配置
+    ./packages.nix                # 系统软件包
+
+    ./fhs-environment.nix         # FHS 环境
+
+    ../../share/programs/dae      # dae 代理配置
   ];
 
   # Nix 配置
@@ -38,8 +42,8 @@
   networking.networkmanager.enable = true;
 
   # 网络代理
-  networking.proxy.default = "http://192.168.2.10:7890";
-  networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+  # networking.proxy.default = "http://192.168.2.10:7890";
+  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # OpenSSH
   services.openssh = {
