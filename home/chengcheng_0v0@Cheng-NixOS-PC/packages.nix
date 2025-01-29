@@ -16,6 +16,9 @@
     # 桌面环境
     waybar      # 状态栏
 
+    # 开发工具
+    commitizen  # Git 提交格式化工具
+
     # 媒体播放
     pavucontrol # 音频控制
     spotify     # 流媒体音乐
