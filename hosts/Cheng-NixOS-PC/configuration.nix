@@ -22,7 +22,7 @@
 
     # https://github.com/shlevy/nix-plugins
     plugin-files = "${pkgs.nix-plugins}/lib/nix/plugins";
-    extra-builtins-file = [ ../../libs/extra-builtins.nix ];
+    extra-builtins-file = [ "/etc/nixos/libs/extra-builtins.nix" ];
   };
 
   # 机密配置
@@ -32,6 +32,8 @@
       keyFile = "/var/lib/sops/age-key.txt";
       # sshKeyPaths = ["/etc/ssh/ssh_host_ed25519_key"];
     };
+
+    # secrets."" = {};
   };
 
   # Bootloader
