@@ -4,7 +4,7 @@
   services.dae = {
     enable = true;
     config = let
-      subscriptions = (builtins.extraBuiltins.readSops ../../../secrets/default.json).proxySubscriptions;
+      getSecret = builtins.extraBuiltins.getSecret;
     in ''
       global {
         wan_interface: auto
@@ -15,7 +15,7 @@
       }
 
       subscription {
-        "${subscriptions.catnet.link}"
+        "${getSecret "proxySubscriptions/catnet/link"}"
       }
 
       dns {

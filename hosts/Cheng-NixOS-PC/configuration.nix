@@ -27,13 +27,20 @@
 
   # 机密配置
   sops = {
-    defaultSopsFile = ../../secrets/default.nix;
+    defaultSopsFile = ../../secrets/default.json;
     age = {
       keyFile = "/var/lib/sops/age-key.txt";
       # sshKeyPaths = ["/etc/ssh/ssh_host_ed25519_key"];
     };
 
-    # secrets."" = {};
+    secrets = {
+      "proxySubscriptions/catnet/website" = {};
+      "proxySubscriptions/catnet/link" = {};
+
+      "gitCredentials/chengcheng_0v0/host" = {};
+      "gitCredentials/chengcheng_0v0/username" = {};
+      "gitCredentials/chengcheng_0v0/password" = {};
+    };
   };
 
   # Bootloader
