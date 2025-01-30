@@ -49,9 +49,9 @@
   };
   # 从机密中获取信息并写入 .git-credentials
   home.file.".git-credentials".text = let
-    gitCredentials = (builtins.extraBuiltins.readSops ../../secrets/default.json).gitCredentials;
+    getSecret = builtins.extraBuiltins.getSecret;
   in ''
-    https://${gitCredentials.chengcheng_0v0.username}:${gitCredentials.chengcheng_0v0.password}@${gitCredentials.chengcheng_0v0.host}
+    https://${getSecret "gitCredentials/chengcheng_0v0/username"}:${getSecret "gitCredentials/chengcheng_0v0/password"}@${getSecret "gitCredentials/chengcheng_0v0/host"}
   '';
 
   # 输入法
