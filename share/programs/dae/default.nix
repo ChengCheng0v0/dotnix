@@ -4,7 +4,7 @@
   services.dae = {
     enable = true;
     config = let
-      subscriptions = (builtins.extraBuiltins.readSops ../../../secrets/default.nix).proxySubscriptions;
+      subscriptions = (builtins.extraBuiltins.readSops ../../../secrets/default.json).proxySubscriptions;
     in ''
       global {
         wan_interface: auto
