@@ -13,6 +13,7 @@
     (desktop "desktop-file")  # 自定义的 .desktop 文件
     (desktop "wallpaper")     # 好康的壁纸 (纯图片)
     (desktop "hypr")          # Hyprland (混成器/窗口管理器)
+    (desktop "swww")          # swww (壁纸守护进程)
     (desktop "waybar")        # Waybar (状态栏)
     (desktop "fcitx5")        # Fcitx5 (输入法)
 
