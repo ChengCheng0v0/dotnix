@@ -9,6 +9,7 @@
     program = name: ./programs/${name};
   in [
     ./packages.nix            # 用户软件包
+    ./defapps.nix             # 默认应用配置
 
     (desktop "desktop-file")  # 自定义的 .desktop 文件
     (desktop "wallpaper")     # 好康的壁纸 (纯图片)
