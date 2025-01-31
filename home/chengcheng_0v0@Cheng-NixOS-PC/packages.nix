@@ -15,6 +15,7 @@
 
     # 桌面环境
     waybar      # 状态栏
+    swww        # 壁纸守护进程
 
     # 开发工具
     commitizen  # Git 提交格式化工具
