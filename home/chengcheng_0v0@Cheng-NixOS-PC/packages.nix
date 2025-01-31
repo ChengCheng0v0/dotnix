@@ -22,6 +22,7 @@
     # 媒体播放
     pavucontrol # 音频控制
     spotify     # 流媒体音乐
+    vlc         # 视频播放器
 
     # 字体
     (import ./fonts/zcool-kuaile.nix { inherit stdenv lib; })
