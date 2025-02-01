@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ lib, pkgs, ... }:
 
 {
   home.username = "chengcheng_0v0"; # 用户名
@@ -50,10 +50,11 @@
     };
   };
   # 从机密中获取信息并写入 .git-credentials
-  home.file.".git-credentials".text = let
+  home.activation.writeGitCredentials = let
     getSecret = builtins.extraBuiltins.getSecret;
-  in ''
-    https://${getSecret "gitCredentials/chengcheng_0v0/username"}:${getSecret "gitCredentials/chengcheng_0v0/password"}@${getSecret "gitCredentials/chengcheng_0v0/host"}
+  in lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+    echo "https://${getSecret "gitCredentials/chengcheng_0v0/username"}:${getSecret "gitCredentials/chengcheng_0v0/password"}@${getSecret "gitCredentials/chengcheng_0v0/host"}" > ~/.git-credentials
+    chmod 600 ~/.git-credentials
   '';
 
   # 输入法
