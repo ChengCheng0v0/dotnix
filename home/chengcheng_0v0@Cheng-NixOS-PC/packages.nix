@@ -19,6 +19,7 @@
 
     # 开发工具
     commitizen  # Git 提交格式化工具
+    just        # 命令执行器
 
     # 媒体播放
     pavucontrol # 音频控制
