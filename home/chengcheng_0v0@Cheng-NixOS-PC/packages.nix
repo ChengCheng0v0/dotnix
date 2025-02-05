@@ -12,6 +12,7 @@
     nmap        # 网络安全工具
     htop        # 系统监测器
     lazygit     # Git TUI
+    bat         # Cat / Less 替代品
 
     # 桌面环境
     waybar      # 状态栏
