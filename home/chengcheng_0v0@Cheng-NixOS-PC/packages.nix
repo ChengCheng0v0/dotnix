@@ -13,6 +13,7 @@
     htop        # 系统监测器
     lazygit     # Git TUI
     bat         # Cat / Less 替代品
+    zoxide      # 更智能的 cd
 
     # 桌面环境
     waybar      # 状态栏

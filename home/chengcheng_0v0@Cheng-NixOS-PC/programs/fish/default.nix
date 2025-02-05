@@ -17,4 +17,6 @@
       tree = "eza --tree --icons -L";
     };
   };
+
+  xdg.configFile."fish/conf.d".source = ./config/conf.d;
 }
