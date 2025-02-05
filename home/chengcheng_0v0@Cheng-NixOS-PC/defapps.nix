@@ -3,9 +3,10 @@
 {
   # 环境变量
   home.sessionVariables = {
-    PAGER = "less";
+    PAGER = "bat";
     EDITOR = "nvim";
     BROWSER = "firefox";
+    TERMINAL = "kitty";
   };
 
   # MIME 类型

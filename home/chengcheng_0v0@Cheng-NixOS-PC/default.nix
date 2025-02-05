@@ -24,6 +24,7 @@
     (program "yazi")          # Yazi (文件管理器)
     (program "lazygit")       # LazyGit (Git TUI)
     (program "prettier")      # Prettier (前端格式化工具)
+    (program "bat")           # Cat / Less 替代品
   ];
 
   # Git
