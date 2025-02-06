@@ -17,6 +17,7 @@
     (desktop "swww")          # swww (壁纸守护进程)
     (desktop "waybar")        # Waybar (状态栏)
     (desktop "fcitx5")        # Fcitx5 (输入法)
+    (desktop "rofi")          # Rofi (程序启动器)
 
     (program "kitty")         # Kitty (终端模拟器)
     (program "fish")          # Fish (交互式 Shell)
