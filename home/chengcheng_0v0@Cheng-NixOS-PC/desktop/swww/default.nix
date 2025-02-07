@@ -4,7 +4,7 @@ let
   mkSetAtTime = {
     service = name: {
       Unit = {
-        Description = "Set '${name}' Wallpaper Using Swww";
+        Description = "Set `${name}` Wallpaper Using Swww";
         Requires = [ "swww-daemon.service" ];
         After = [ "graphical-session.target" ];
       };
@@ -35,6 +35,7 @@ in {
       After = [ "graphical-session.target" ];
     };
     Service = {
+      ExecStartPre="/usr/bin/env sleep 2"; # HACK: 延迟一段时间以确保 Hyprland 启动完成，不然会启动失败。
       ExecStart = "${pkgs.swww}/bin/swww-daemon";
       Restart = "on-failure";
     };
@@ -46,7 +47,7 @@ in {
   # 登录时设置壁纸
   systemd.user.services.swww-set-at-login = {
     Unit = {
-      Description = "Set login wallpaper using swww";
+      Description = "Set Login Wallpaper Using Swww";
       Requires = [ "swww-daemon.service" ];
       After = [ "graphical-session.target" ];
     };
