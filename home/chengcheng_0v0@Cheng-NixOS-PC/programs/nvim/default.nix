@@ -1,7 +1,7 @@
-{ config, ... }:
+{ config, vars, ... }:
 
 let
-  nvimConfigPath = "/etc/nixos/home/chengcheng_0v0@Cheng-NixOS-PC/programs/nvim/config";
+  nvim = vars.home.chengcheng_0v0.nvim;
 in {
-  xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink nvimConfigPath;
+  xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink nvim.configPath;
 }

@@ -1,9 +1,8 @@
-{ config, ... }:
+{ config, vars, ... }:
 
 let
-  fcitxConfigPath = "/etc/nixos/home/chengcheng_0v0@Cheng-NixOS-PC/desktop/fcitx5/config";
-  rimeSharePath = "/etc/nixos/home/chengcheng_0v0@Cheng-NixOS-PC/desktop/fcitx5/share/rime";
+  fcitx = vars.home.chengcheng_0v0.fcitx;
 in {
-  xdg.configFile."fcitx5".source = config.lib.file.mkOutOfStoreSymlink fcitxConfigPath;
-  xdg.dataFile."fcitx5/rime".source = config.lib.file.mkOutOfStoreSymlink rimeSharePath;
+  xdg.configFile."fcitx5".source = config.lib.file.mkOutOfStoreSymlink fcitx.configPath;
+  xdg.dataFile."fcitx5/rime".source = config.lib.file.mkOutOfStoreSymlink fcitx.rimeSharePath;
 }

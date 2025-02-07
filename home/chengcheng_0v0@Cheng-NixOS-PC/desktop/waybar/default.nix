@@ -1,7 +1,7 @@
-{ config, ... }:
+{ config, vars, ... }:
 
 let
-  waybarConfigPath = "/etc/nixos/home/chengcheng_0v0@Cheng-NixOS-PC/desktop/waybar/config";
+  waybar = vars.home.chengcheng_0v0.waybar;
 in {
-  xdg.configFile."waybar".source = config.lib.file.mkOutOfStoreSymlink waybarConfigPath;
+  xdg.configFile."waybar".source = config.lib.file.mkOutOfStoreSymlink waybar.configPath;
 }
