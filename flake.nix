@@ -14,7 +14,7 @@
     nixosConfigurations = {
       Cheng-NixOS-PC = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
+        specialArgs = { inherit inputs; } // { vars = (import ./vars.nix).Cheng-NixOS-PC; };
         modules = [
           ./hosts/Cheng-NixOS-PC/configuration.nix
 
@@ -24,12 +24,15 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
+              extraSpecialArgs = { inherit inputs; } // { vars = (import ./vars.nix).Cheng-NixOS-PC; };
 
               sharedModules = [
                 inputs.sops-nix.homeManagerModules.sops
               ];
 
-              users.chengcheng_0v0 = import (./home + "/chengcheng_0v0@Cheng-NixOS-PC");
+              users = {
+                chengcheng_0v0 = import (./home + "/chengcheng_0v0@Cheng-NixOS-PC");
+              };
             };
           }
         ];
