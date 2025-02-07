@@ -15,4 +15,8 @@
       name = "ZCOOL Kuaile";
     };
   };
+
+  catppuccin.gtk = {
+    enable = true;
+  };
 }

@@ -8,9 +8,10 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    catppuccin.url = "github:catppuccin/nix/main";
   };
 
-  outputs = inputs@{ self, sops-nix, nixpkgs, home-manager, ... }: {
+  outputs = inputs@{ self, nixpkgs, sops-nix, home-manager, catppuccin, ... }: {
     nixosConfigurations = {
       Cheng-NixOS-PC = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -19,8 +20,7 @@
           ./hosts/Cheng-NixOS-PC/configuration.nix
 
           sops-nix.nixosModules.sops
-          home-manager.nixosModules.home-manager
-          {
+          home-manager.nixosModules.home-manager {
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
@@ -28,6 +28,7 @@
 
               sharedModules = [
                 inputs.sops-nix.homeManagerModules.sops
+                inputs.catppuccin.homeManagerModules.catppuccin
               ];
 
               users = {
@@ -35,6 +36,7 @@
               };
             };
           }
+          catppuccin.nixosModules.catppuccin
         ];
       };
     };

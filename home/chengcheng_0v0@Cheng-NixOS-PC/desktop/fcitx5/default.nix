@@ -13,6 +13,12 @@ in {
     ];
   };
 
+  catppuccin.fcitx5 = {
+      enable = true;
+      apply = false;
+      flavor = "macchiato";
+    };
+
   xdg.configFile."fcitx5".source = config.lib.file.mkOutOfStoreSymlink fcitx.configPath;
   xdg.dataFile."fcitx5/rime".source = config.lib.file.mkOutOfStoreSymlink fcitx.rimeSharePath;
 }

@@ -18,5 +18,7 @@
     };
   };
 
+  catppuccin.fish.enable = true;
+
   xdg.configFile."fish/conf.d".source = ./config/conf.d;
 }

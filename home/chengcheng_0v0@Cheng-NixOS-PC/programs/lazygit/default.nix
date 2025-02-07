@@ -1,7 +1,12 @@
 {
   programs.lazygit = {
     enable = true;
+    settings = {
+      gui.authorColors = {
+        "成成0v0" = "magenta";
+      };
+    };
   };
 
-  xdg.configFile."lazygit".source = ./config;
+  catppuccin.lazygit.enable = true;
 }
