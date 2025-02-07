@@ -11,8 +11,8 @@
     ./packages.nix            # 用户软件包
     ./defapps.nix             # 默认应用配置
 
-    (desktop "desktop-file")  # 自定义的 .desktop 文件
-    (desktop "wallpaper")     # 好康的壁纸 (纯图片)
+    (desktop "desktop-files")  # 自定义的 .desktop 文件
+    (desktop "wallpapers")     # 好康的壁纸 (纯图片/视频)
     (desktop "hypr")          # Hyprland (混成器/窗口管理器)
     (desktop "swww")          # swww (壁纸守护进程)
     (desktop "waybar")        # Waybar (状态栏)
