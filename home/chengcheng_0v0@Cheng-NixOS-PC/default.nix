@@ -7,10 +7,13 @@
   imports = let
     desktop = name: ./desktop/${name};
     program = name: ./programs/${name};
+    service = name: ./services/${name}.nix;
   in [
     ./packages.nix            # 用户软件包
     ./programs.nix            # 用户应用程序
     ./defapps.nix             # 默认应用配置
+
+    (service "playerctld")    # playerctl 守护进程
 
     (desktop "desktop-files") # 自定义的 .desktop 文件
     (desktop "wallpapers")    # 好康的壁纸 (纯图片/视频)
