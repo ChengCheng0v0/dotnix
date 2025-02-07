@@ -3,5 +3,5 @@
     enable = true;
   };
 
-  xdg.configFile."bat".source = ./config;
+  catppuccin.bat.enable = true;
 }

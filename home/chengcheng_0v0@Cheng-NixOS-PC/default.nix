@@ -15,6 +15,7 @@
     (desktop "desktop-files") # 自定义的 .desktop 文件
     (desktop "wallpapers")    # 好康的壁纸 (纯图片/视频)
     (desktop "gtk")           # GTK
+    (desktop "qt")            # Qt
     (desktop "hypr")          # Hyprland (混成器/窗口管理器)
     (desktop "swww")          # swww (壁纸守护进程)
     (desktop "waybar")        # Waybar (状态栏)
@@ -30,6 +31,12 @@
     (program "prettier")      # Prettier (前端格式化工具)
     (program "bat")           # Cat / Less 替代品
   ];
+
+  # Catppuccin
+  catppuccin = {
+    flavor = "mocha";
+    accent = "pink";
+  };
 
   # 字体
   fonts.fontconfig = {
