@@ -1,14 +1,7 @@
--- 如果在 NixOS 上则设置 NIX_LD 环境变量
-if vim.loop.os_uname().sysname == "Linux" and vim.fn.filereadable("/etc/NIXOS") == 1 then
-  local handle = io.popen(
-    "nix eval --impure --raw --expr 'let pkgs = import <nixpkgs> {}; NIX_LD = pkgs.lib.fileContents \"${pkgs.stdenv.cc}/nix-support/dynamic-linker\"; in NIX_LD'"
-  )
-  if handle then
-    local nix_ld = handle:read("*a")
-    handle:close()
-    nix_ld = nix_ld:gsub("%s+", "") -- 去除可能的换行符
-    vim.env.NIX_LD = nix_ld
-  end
+-- 如果存在 __NIX_LD_PATH 则设置 NIX_LD 环境变量
+-- 这么做是为了让 Mason 等依赖标准 FHS 的功能能够正常使用
+if vim.env.__NIX_LD_PATH then
+  vim.env.NIX_LD = vim.env.__NIX_LD_PATH
 end
 
 -- bootstrap lazy.nvim, LazyVim and your plugins
