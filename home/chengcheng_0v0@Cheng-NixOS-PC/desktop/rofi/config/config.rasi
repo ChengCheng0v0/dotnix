@@ -2,6 +2,7 @@ configuration {
   modes: "drun,run,window,ssh";
 
   font: "ZCOOL Kuaile 18";
+  show-icons: true;
 
   kb-mode-next: "Shift+Right,Control+Tab,Tab";
   kb-element-next: "";
@@ -71,4 +72,8 @@ listview {
 element {
   padding: 8px 14px 10px 14px;
   border-radius: 6px;
+}
+
+element-icon {
+  margin: 0 8px 0 0;
 }
