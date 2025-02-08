@@ -2,7 +2,7 @@
   description = "awa";
 
   inputs = {
-    nixpkg.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     sops-nix.url = "github:Mic92/sops-nix/master";
     home-manager = {
       url = "github:nix-community/home-manager/master";
