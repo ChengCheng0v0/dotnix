@@ -43,6 +43,11 @@
     };
   };
 
+  # 系统环境变量
+  environment.variables = {
+    __NIX_LD_PATH = builtins.replaceStrings ["\n"] [""] (builtins.readFile "${pkgs.stdenv.cc}/nix-support/dynamic-linker");
+  };
+
   # 启用 nix-ld
   programs.nix-ld.enable = true;
 
