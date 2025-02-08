@@ -57,7 +57,7 @@
             "playing": "",
             "paused": "▶",
         },
-        "ignored-players": ["zen-browser"],
+        "ignored-players": ["zen-browser", "firefox"],
     },
     "pulseaudio": {
         "scroll-step": 5,
