@@ -11,8 +11,8 @@ return {
         },
         marks = {
           Cursor = {
-            text = "#",
-            color = "#f38ba8",
+            text = "*",
+            color = "#f5bde6",
           },
         },
         excluded_buftypes = {
