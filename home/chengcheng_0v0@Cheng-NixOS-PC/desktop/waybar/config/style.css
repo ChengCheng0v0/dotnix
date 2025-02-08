@@ -25,7 +25,7 @@ window#waybar {
 #mpris {
     padding: 0 10px;
     border-radius: 10px;
-    border: 1px solid #f5c2e7;
+    border: 2px solid #f5c2e7;
     background-color: #313244;
 }
 
