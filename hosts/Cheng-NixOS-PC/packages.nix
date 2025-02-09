@@ -28,6 +28,9 @@
     # 开发工具
     neovim      # 代码编辑器
     git         # 版本控制系统
+
+    # 其它
+    caddy       # HTTP 服务器
   ];
 
   fonts.packages = with pkgs; [
