@@ -21,6 +21,9 @@
     spotify     # 流媒体音乐
     vlc         # 视频播放器
 
+    # 其它
+    rustlings   # Rust 小练习
+
     # 字体
     (import ./fonts/zcool-kuaile.nix { inherit stdenv lib; })
 
