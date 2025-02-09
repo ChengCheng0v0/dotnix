@@ -2,6 +2,7 @@
 
 let
   fcitx = vars.home.chengcheng_0v0.fcitx;
+  rime-frost = with pkgs; (import ./packages/rime-frost.nix { inherit stdenv lib fetchFromGitHub librime; });
 in {
   i18n.inputMethod = {
     enabled = "fcitx5";
@@ -13,12 +14,15 @@ in {
     ];
   };
 
+  home.packages = [ rime-frost ];
+
   catppuccin.fcitx5 = {
-      enable = true;
-      apply = false;
-      flavor = "macchiato";
-    };
+    enable = true;
+    apply = false;
+    flavor = "macchiato";
+  };
 
   xdg.configFile."fcitx5".source = config.lib.file.mkOutOfStoreSymlink fcitx.configPath;
-  xdg.dataFile."fcitx5/rime".source = config.lib.file.mkOutOfStoreSymlink fcitx.rimeSharePath;
+  xdg.dataFile."fcitx5/rime".source = "${rime-frost}/share/fcitx5/rime";
+  # xdg.dataFile."fcitx5/rime".source = config.lib.file.mkOutOfStoreSymlink fcitx.rimeSharePath;
 }
