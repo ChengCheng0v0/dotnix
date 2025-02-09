@@ -25,6 +25,11 @@
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };
+
+    "/mnt" = {
+      device = "/dev/disk/by-uuid/4a0f26fa-3cf5-4ee2-a555-3f45c59446b1";
+      fsType = "btrfs";
+    };
   };
 
   # Swap
