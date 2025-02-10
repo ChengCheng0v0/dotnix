@@ -9,7 +9,7 @@ let
         After = [ "graphical-session.target" ];
       };
       Service = {
-        ExecStart = "${pkgs.swww}/bin/swww img ${./toggle-targets/time-${name}} --transition-type random --transition-duration 1.5";
+        ExecStart = "${pkgs.swww}/bin/swww img ${./toggle-targets/time-${name}} --transition-type grow --transition-duration 1.5 --transition-fps 160";
       };
     };
     timer = name: (time: {
