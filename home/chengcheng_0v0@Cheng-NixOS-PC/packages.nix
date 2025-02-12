@@ -27,6 +27,7 @@
 
     # 其它
     rustlings   # Rust 小练习
+    nemo        # 文件管理器
 
     # 字体
     (import ./fonts/zcool-kuaile.nix { inherit stdenv lib; })
