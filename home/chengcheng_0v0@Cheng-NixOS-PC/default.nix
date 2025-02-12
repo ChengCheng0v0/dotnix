@@ -33,6 +33,7 @@
     (program "lazygit")       # LazyGit (Git TUI)
     (program "prettier")      # Prettier (前端格式化工具)
     (program "bat")           # Cat / Less 替代品
+    (program "mpv")           # MPV (媒体播放器)
   ];
 
   # Catppuccin
