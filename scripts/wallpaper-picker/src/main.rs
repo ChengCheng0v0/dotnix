@@ -56,7 +56,7 @@ fn main() {
     );
 
     let output = Command::new("rofi")
-        .args(["-dmenu", "-p", "Choose Wallpaper"])
+        .args(["-config", "/etc/nixos/home/chengcheng_0v0@Cheng-NixOS-PC/desktop/rofi/config/wallpaper_picker_config.rasi", "-dmenu", "-p", "Choose Wallpaper"])
         .stdin(Stdio::piped())
         .stdout(Stdio::piped())
         .spawn()
