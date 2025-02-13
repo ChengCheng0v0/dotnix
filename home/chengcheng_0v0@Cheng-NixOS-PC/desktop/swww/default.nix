@@ -6,6 +6,7 @@ let
       Unit = {
         Description = "Set `${name}` Wallpaper Using Swww";
         Requires = [ "swww-daemon.service" ];
+        PartOf = [ "graphical-session.target" ];
         After = [ "graphical-session.target" ];
       };
       Service = {
@@ -16,6 +17,7 @@ let
       Unit = {
         Description = "Auto Set '${name}' Wallpaper Using Swww";
         Requires = [ "swww-daemon.service" ];
+        PartOf = [ "graphical-session.target" ];
         After = [ "graphical-session.target" ];
       };
       Timer = {
@@ -32,10 +34,11 @@ in {
   systemd.user.services.swww-daemon = {
     Unit = {
       Description = "Swww Daemon for Wayland Wallpaper Management";
+      PartOf = [ "graphical-session.target" ];
       After = [ "graphical-session.target" ];
     };
     Service = {
-      ExecStartPre="/usr/bin/env sleep 2"; # HACK: 延迟一段时间以确保 Hyprland 启动完成，不然会启动失败。
+      ExecStartPre ="/usr/bin/env sleep 2"; # HACK: 延迟一段时间以确保 Hyprland 启动完成，不然会启动失败。
       ExecStart = "${pkgs.swww}/bin/swww-daemon";
       Restart = "on-failure";
     };
@@ -49,6 +52,7 @@ in {
     Unit = {
       Description = "Set Login Wallpaper Using Swww";
       Requires = [ "swww-daemon.service" ];
+      PartOf = [ "graphical-session.target" ];
       After = [ "graphical-session.target" ];
     };
     Service = {
