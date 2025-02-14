@@ -11,6 +11,8 @@
 
     # 桌面环境
     swww        # 壁纸守护进程
+    grim        # Wayland 截图工具
+    slurp       # Wayland 屏幕选择器
 
     # 语言支持
     rust-analyzer # Rust 分析器
