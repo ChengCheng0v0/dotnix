@@ -47,14 +47,20 @@
     };
   };
 
+  # Bootloader
+  boot = {
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+    };
+
+    kernelPackages = pkgs.linuxPackages_zen; # 使用 Zen 内核
+  };
+
   # 系统环境变量
   environment.variables = {
     __NIX_LD_PATH = builtins.replaceStrings ["\n"] [""] (builtins.readFile "${pkgs.stdenv.cc}/nix-support/dynamic-linker");
   };
-
-  # Bootloader
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
 
   # 网络连接
   networking = {
