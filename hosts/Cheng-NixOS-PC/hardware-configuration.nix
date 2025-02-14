@@ -37,8 +37,8 @@
     { device = "/dev/disk/by-uuid/cf1a87f8-5780-41ac-afcf-04119336e4b4"; }
   ];
 
-  # 启用 DHCP
-  networking.useDHCP = lib.mkDefault true;
+  # 禁用 DHCP
+  networking.useDHCP = lib.mkDefault false;
 
   # 硬件平台
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
