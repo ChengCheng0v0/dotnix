@@ -56,8 +56,21 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # 启用 NetworkManager
-  networking.networkmanager.enable = true;
+  # 网络连接
+  networking = {
+    networkmanager.enable = true;
+
+    defaultGateway = "192.168.2.1";
+    nameservers = [ "223.5.5.5" "1.1.1.1" "8.8.8.8" ];
+    interfaces.enp4s0 = {
+      ipv4.addresses = [
+        {
+          address = "192.168.2.2";
+          prefixLength = 24;
+        }
+      ];
+    };
+  };
 
   # OpenSSH
   services.openssh = {
