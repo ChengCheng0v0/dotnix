@@ -29,8 +29,9 @@
     ayugram-desktop # 第三方 Telegram 客户端
 
     # 其它
-    rustlings   # Rust 小练习
     nemo        # 文件管理器
+    rustlings   # Rust 小练习
+    pot         # 派了个萌的翻译器
 
     # 字体
     (import ./fonts/zcool-kuaile.nix { inherit stdenv lib; })
