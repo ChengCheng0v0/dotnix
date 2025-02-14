@@ -4,13 +4,17 @@
   # 主机名
   networking.hostName = "Cheng-NixOS-PC";
 
+  # 允许非自由软件
+  nixpkgs.config.allowUnfree = true;
+
   imports = [
     ./hardware-configuration.nix  # 硬件配置
 
     ./users.nix                   # 用户配置
     ./packages.nix                # 系统软件包
+    ./programs.nix                # 系统应用程序
 
-    ./fhs-environment.nix         # FHS 环境
+    ./modules/fhs-environment.nix # FHS 环境
 
     ../../share/programs/dae      # dae 代理配置
   ];
@@ -48,19 +52,12 @@
     __NIX_LD_PATH = builtins.replaceStrings ["\n"] [""] (builtins.readFile "${pkgs.stdenv.cc}/nix-support/dynamic-linker");
   };
 
-  # 启用 nix-ld
-  programs.nix-ld.enable = true;
-
   # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   # 启用 NetworkManager
   networking.networkmanager.enable = true;
-
-  # 网络代理
-  # networking.proxy.default = "http://192.168.2.10:7890";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # OpenSSH
   services.openssh = {
@@ -116,16 +113,6 @@
   # 字体
   fonts.fontconfig.enable = true;
   fonts.enableDefaultPackages = true;
-
-  # 启用 Firefox
-  programs.firefox.enable = true;
-  # 启用 Fish Shell
-  programs.fish.enable = true;
-  # 启用 GnuPG
-  programs.gnupg.agent.enable = true;
-
-  # 允许非自由软件
-  nixpkgs.config.allowUnfree = true;
 
   system.stateVersion = "unstable";
 }
