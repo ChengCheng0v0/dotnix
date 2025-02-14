@@ -34,6 +34,7 @@
     nemo        # 文件管理器
     rustlings   # Rust 小练习
     pot         # 派了个萌的翻译器
+    tesseract   # OCR 引擎
 
     # 字体
     (import ./fonts/zcool-kuaile.nix { inherit stdenv lib; })
