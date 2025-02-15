@@ -152,5 +152,5 @@
   fonts.fontconfig.enable = true;
   fonts.enableDefaultPackages = true;
 
-  system.stateVersion = "unstable";
+  system.stateVersion = "25.05";
 }

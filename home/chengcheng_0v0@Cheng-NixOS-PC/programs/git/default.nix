@@ -5,6 +5,7 @@
     enable = true;
     userEmail = "chengcheng@miao.ms";
     userName = "成成0v0";
+    signing.format = "openpgp";
 
     /* ----------------------------------------------------- *
       sec   rsa2048 2024-10-25 [SCEAR]
