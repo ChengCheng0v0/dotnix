@@ -8,13 +8,13 @@
   nixpkgs.config.allowUnfree = true;
 
   imports = [
-    ./hardware-configuration.nix  # 硬件配置
+    ./hardware_configuration.nix  # 硬件配置
 
     ./users.nix                   # 用户配置
     ./packages.nix                # 系统软件包
     ./programs.nix                # 系统应用程序
 
-    ./modules/fhs-environment.nix # FHS 环境
+    ./modules/fhs_environment.nix # FHS 环境
 
     ../../share/programs/dae      # dae 代理配置
   ];

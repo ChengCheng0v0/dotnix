@@ -10,7 +10,7 @@ let
         After = [ "graphical-session.target" ];
       };
       Service = {
-        ExecStart = "${pkgs.swww}/bin/swww img ${./toggle-targets/time-${name}} --transition-type grow --transition-duration 1.5 --transition-fps 160";
+        ExecStart = "${pkgs.swww}/bin/swww img ${./toggle_targets/time-${name}} --transition-type grow --transition-duration 1.5 --transition-fps 160";
       };
     };
     timer = name: (time: {
@@ -57,7 +57,7 @@ in {
     };
     Service = {
       ExecStartPre="/usr/bin/env sleep 0.5"; # HACK: 延迟一段时间以确保 swww-daemon 启动完成，不然会黑屏。
-      ExecStart = "${pkgs.swww}/bin/swww img ${./toggle-targets/login}";
+      ExecStart = "${pkgs.swww}/bin/swww img ${./toggle_targets/login}";
       Restart = "on-failure";
     };
     Install = {

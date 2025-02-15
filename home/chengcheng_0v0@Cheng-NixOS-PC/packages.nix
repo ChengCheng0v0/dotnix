@@ -22,6 +22,10 @@
     commitizen  # Git 提交格式化工具
     just        # 命令执行器
 
+    # 实用工具
+    nemo        # 文件管理器
+    pot         # 派了个萌的翻译器
+
     # 媒体播放
     pavucontrol # 音频控制
     spotify     # 流媒体音乐
@@ -31,9 +35,7 @@
     ayugram-desktop # 第三方 Telegram 客户端
 
     # 其它
-    nemo        # 文件管理器
     rustlings   # Rust 小练习
-    pot         # 派了个萌的翻译器
     tesseract   # OCR 引擎
 
     # 字体
