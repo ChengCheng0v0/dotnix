@@ -134,9 +134,18 @@
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
     pulse.enable = true;
+    alsa = {
+      enable = true;
+      support32Bit = true;
+    };
+    extraConfig.pipewire."99-rates" = {
+      "context.properties" = {
+        "default.clock.rate" = 192000;
+        "defautlt.allowed-rates" = [ 192000 48000 44100 ];
+        # "defautlt.allowed-rates" = [ 192000 ];
+      };
+    };
   };
 
   # 字体
