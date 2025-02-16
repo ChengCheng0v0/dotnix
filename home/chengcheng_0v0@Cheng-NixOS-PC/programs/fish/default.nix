@@ -16,6 +16,10 @@
       ld = "eza --icons --group-directories-first -al";
       tree = "eza --tree --icons -L";
     };
+    functions = {
+      # Yazi wrapper
+      y = builtins.readFile ./functions/y.fish;
+    };
   };
 
   catppuccin.fish.enable = true;
