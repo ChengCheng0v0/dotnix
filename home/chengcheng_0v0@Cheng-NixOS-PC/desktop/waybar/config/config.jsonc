@@ -73,6 +73,8 @@
             "default": [" ", " ", "<span color='#f38ba8'>   DANGER!</span>"],
         },
         "on-click": "pavucontrol",
+        "on-click-forward": "playerctld shift",
+        "on-click-backward": "playerctld unshift",
     },
     "power-profiles-daemon": {
         "format": "{icon}",
