@@ -25,6 +25,7 @@
     cargo       # Rust 的包管理器
     python314   # Python 3.14
     nodejs_23   # Node.js 23
+    fish-lsp    # Fish 语言服务器
 
     # 开发工具
     neovim      # 代码编辑器
