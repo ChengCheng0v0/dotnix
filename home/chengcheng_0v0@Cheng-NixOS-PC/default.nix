@@ -14,6 +14,7 @@
     ./defapps.nix             # 默认应用配置
 
     (service "playerctld")    # playerctl 守护进程
+    (service "spotifyd")      # SpotifyD (Spotify 音频播放守护进程)
 
     (desktop "desktop_files") # 自定义的 .desktop 文件
     (desktop "wallpapers")    # 好康的壁纸 (纯图片/视频)
