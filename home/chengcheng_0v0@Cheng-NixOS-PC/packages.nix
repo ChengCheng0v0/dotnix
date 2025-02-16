@@ -25,6 +25,7 @@
     # 实用工具
     nemo        # 文件管理器
     pot         # 派了个萌的翻译器
+    qimgv       # 图像查看器
 
     # 媒体播放
     pavucontrol # 音频控制

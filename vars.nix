@@ -21,6 +21,9 @@
         nvim = {
           configPath = "/etc/nixos/home/chengcheng_0v0@Cheng-NixOS-PC/programs/nvim/config";
         };
+        qimgv = {
+          configPath = "/etc/nixos/home/chengcheng_0v0@Cheng-NixOS-PC/programs/qimgv/config";
+        };
       };
     };
   };
