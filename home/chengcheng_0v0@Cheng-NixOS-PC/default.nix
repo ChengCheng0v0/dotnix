@@ -36,6 +36,7 @@
     (program "bat")           # Cat / Less 替代品
     (program "mpv")           # MPV (媒体播放器)
     (program "obs")           # OBS (视频录制/推流/虚拟摄像头)
+    (program "spotify-player") # Spotify Player (Spotify TUI 前端)
   ];
 
   # Catppuccin

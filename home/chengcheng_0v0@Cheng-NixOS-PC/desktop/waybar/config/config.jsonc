@@ -34,9 +34,9 @@
         "format": "{player_icon} {title} - {artist}",
         "format-paused": "{player_icon} <i>{title} [{position}/{length}]</i>",
         "player-icons": {
-            "default": "▶",
-            "spotify": "",
-            "spotifyd": "",
+            "default": " ",
+            "spotify": " ",
+            "spotifyd": " ",
         },
         "status-icons": {
             "playing": "",

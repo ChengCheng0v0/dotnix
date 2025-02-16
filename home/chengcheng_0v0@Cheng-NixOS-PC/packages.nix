@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkgs;[
+  home.packages = with pkgs; [
     # 终端工具
     neofetch    # 经典身份证
     fastfetch   # 时尚身份证
@@ -37,6 +37,7 @@
     # 其它
     rustlings   # Rust 小练习
     tesseract   # OCR 引擎
+    playerctl   # 播放控制器
 
     # 字体
     (import ./fonts/zcool-kuaile.nix { inherit stdenv lib; })
