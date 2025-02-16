@@ -28,21 +28,21 @@ init:
 
 # 重新编译 NixOS
 rebuild:
-  sudo nixos-rebuild build --flake . --show-trace --impure
+  sudo nixos-rebuild build --flake . --impure
   @echo -e "\n{{YELLOW}}The current changes will not be saved! To apply the changes permanently, use switch or boot.{{RESET}}"
 
 # 重新编译 NixOS 并临时应用
 rebuild-test:
-  sudo nixos-rebuild test --flake . --show-trace --impure
+  sudo nixos-rebuild test --flake . --impure
   @echo -e "\n{{YELLOW}}The current changes will not be saved! To apply the changes permanently, use switch or boot.{{RESET}}"
 
 # 重新编译 NixOS 并立即切换
 rebuild-switch:
-  sudo nixos-rebuild switch --flake . --show-trace --impure
+  sudo nixos-rebuild switch --flake . --impure
 
 # 重新编译 NixOS 并在下次启动后切换
 rebuild-boot:
-  sudo nixos-rebuild boot --flake . --show-trace --impure
+  sudo nixos-rebuild boot --flake . --impure
   @echo -e "\n{{YELLOW}}The current changes will be applied after reboot.{{RESET}}"
 
 # 加密机密
