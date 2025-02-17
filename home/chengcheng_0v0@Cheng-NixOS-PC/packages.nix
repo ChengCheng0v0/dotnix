@@ -26,6 +26,9 @@
     nemo        # 文件管理器
     pot         # 派了个萌的翻译器
     qimgv       # 图像查看器
+    lnav        # 日志文件导航器
+    sysz        # systemctl 的 Fzf TUI
+    gpg-tui     # GnuPG 的 TUI 管理器
 
     # 媒体播放
     pavucontrol # 音频控制
