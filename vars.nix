@@ -8,9 +8,6 @@
           assetsPath.video = "/etc/nixos/home/chengcheng_0v0@Cheng-NixOS-PC/desktop/wallpapers/video";
           linkTarget.video = "Videos/wallpapers";
         };
-        hypr = {
-          configPath = "/etc/nixos/home/chengcheng_0v0@Cheng-NixOS-PC/desktop/hypr/config";
-        };
         waybar = {
           configPath = "/etc/nixos/home/chengcheng_0v0@Cheng-NixOS-PC/desktop/waybar/config";
         };
