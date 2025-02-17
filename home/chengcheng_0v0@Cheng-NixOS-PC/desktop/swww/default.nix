@@ -4,9 +4,8 @@ let
   mkSetAtTime = {
     service = name: {
       Unit = {
-        Description = "Set `${name}` Wallpaper Using Swww";
+        Description = "Set ${name} wallpaper using swww";
         Requires = [ "swww-daemon.service" ];
-        PartOf = [ "graphical-session.target" ];
         After = [ "graphical-session.target" ];
       };
       Service = {
@@ -15,9 +14,8 @@ let
     };
     timer = name: (time: {
       Unit = {
-        Description = "Auto Set '${name}' Wallpaper Using Swww";
+        Description = "Auto set `${name}` wallpaper using swww";
         Requires = [ "swww-daemon.service" ];
-        PartOf = [ "graphical-session.target" ];
         After = [ "graphical-session.target" ];
       };
       Timer = {
@@ -30,38 +28,20 @@ let
     });
   };
 in {
-  # swww 的守护进程
+  # swww 守护进程
   systemd.user.services.swww-daemon = {
     Unit = {
-      Description = "Swww Daemon for Wayland Wallpaper Management";
+      Description = "The swww daemon for Wayland wallpaper management";
       PartOf = [ "graphical-session.target" ];
       After = [ "graphical-session.target" ];
+      ConditionEnvironment = [ "WAYLAND_DISPLAY" ];
     };
     Service = {
-      ExecStartPre ="/usr/bin/env sleep 2"; # HACK: 延迟一段时间以确保 Hyprland 启动完成，不然会启动失败。
       ExecStart = "${pkgs.swww}/bin/swww-daemon";
       Restart = "on-failure";
     };
     Install = {
-      WantedBy = [ "default.target" ];
-    };
-  };
-
-  # 登录时设置壁纸
-  systemd.user.services.swww-set-at-login = {
-    Unit = {
-      Description = "Set Login Wallpaper Using Swww";
-      Requires = [ "swww-daemon.service" ];
-      PartOf = [ "graphical-session.target" ];
-      After = [ "graphical-session.target" ];
-    };
-    Service = {
-      ExecStartPre="/usr/bin/env sleep 0.5"; # HACK: 延迟一段时间以确保 swww-daemon 启动完成，不然会黑屏。
-      ExecStart = "${pkgs.swww}/bin/swww img ${./toggle_targets/login}";
-      Restart = "on-failure";
-    };
-    Install = {
-      WantedBy = [ "default.target" ];
+      WantedBy = [ "graphical-session.target" ];
     };
   };
 
