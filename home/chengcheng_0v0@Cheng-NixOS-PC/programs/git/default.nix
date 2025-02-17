@@ -23,13 +23,26 @@
       };
       pull.rebase = false;
     };
+
+    # Delta 语法高亮
+    delta = {
+      enable = true;
+      options = {
+        pager = "less -R";
+        line-numbers = true;
+      };
+    };
   };
 
-  # 从机密中获取信息并写入 .git-credentials
+  # 从机密中获取登录凭据并写入 .git-credentials
   home.activation.writeGitCredentials = let
     getSecret = builtins.extraBuiltins.getSecret;
   in lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     echo "https://${getSecret "gitCredentials/chengcheng_0v0/username"}:${getSecret "gitCredentials/chengcheng_0v0/password"}@${getSecret "gitCredentials/chengcheng_0v0/host"}" > ~/.git-credentials
     chmod 600 ~/.git-credentials
   '';
+
+  catppuccin.delta = {
+    enable = true;
+  };
 }
