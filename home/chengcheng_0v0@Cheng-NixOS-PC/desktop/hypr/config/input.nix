@@ -11,8 +11,14 @@
 
   gestures.workspace_swipe = false;
 
-  device = {
-    name = "epic-mouse-v1";
-    sensitivity = -0.5;
-  };
+  device = [
+    {
+      name = "epic-mouse-v1";
+      sensitivity = -0.5;
+    }
+    {
+      name = "wacom-one-by-wacom-s-pen";
+      output = "DP-1";
+    }
+  ];
 }

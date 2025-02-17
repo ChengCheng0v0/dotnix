@@ -129,6 +129,9 @@
     variant = "";
   };
 
+  # 启用 OpenTabletDriver
+  hardware.opentabletdriver.enable = true;
+
   # 音频服务
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
