@@ -37,6 +37,7 @@
             "default": " ",
             "spotify": " ",
             "spotifyd": " ",
+            "spotify_player": " ",
         },
         "status-icons": {
             "playing": "",
