@@ -3,6 +3,7 @@
     "$mainMod SHIFT, M, exit"
     "$mainMod, space, exec, $menu"
     "$mainMod, 0x2f, exec, $terminal"
+    "$mainMod, V, exec, kitty --class clipse -e clipse"
     "$mainMod, E, exec, $file_manager"
     "$mainMod SHIFT, E, exec, $gui_file_manager"
     "$mainMod SHIFT, W, exec, $wp_picker"

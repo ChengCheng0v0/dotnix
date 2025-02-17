@@ -14,5 +14,10 @@
     # qimgv
     "float, class:qimgv"
     "size 1380 800, class:qimgv"
+
+    # Clipse
+    "float, class:clipse"
+    "size 622 652, class:clipse"
+    # "move cursor 0 0, class:clipse"
   ];
 }

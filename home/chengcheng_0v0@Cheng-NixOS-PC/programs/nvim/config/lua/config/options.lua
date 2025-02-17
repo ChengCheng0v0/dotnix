@@ -3,7 +3,7 @@
 -- Add any additional options here
 
 -- 关闭系统剪切板同步
-vim.opt.clipboard = ""
+-- vim.opt.clipboard = ""
 
 -- 启用持久化撤销
 vim.opt.undofile = true

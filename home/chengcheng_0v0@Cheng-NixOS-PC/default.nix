@@ -13,8 +13,9 @@
     ./programs.nix            # 用户应用程序
     ./defapps.nix             # 默认应用配置
 
+    (service "clipse_listener") # Clipse 剪切板监听器
     (service "playerctld")    # playerctl 守护进程
-    # (service "spotifyd")      # SpotifyD (Spotify 音频播放守护进程)
+    # (service "spotifyd")      # Spotify 音频播放守护进程
 
     (desktop "desktop_files") # 自定义的 .desktop 文件
     (desktop "wallpapers")    # 好康的壁纸 (纯图片/视频)
@@ -38,6 +39,7 @@
     (program "obs")           # OBS (视频录制/推流/虚拟摄像头)
     (program "spotify-player") # Spotify Player (Spotify TUI 前端)
     (program "qimgv")         # qimgv (图像查看器)
+    (program "clipse")        # Clipse (TUI 剪切板管理器)
   ];
 
   # Catppuccin
