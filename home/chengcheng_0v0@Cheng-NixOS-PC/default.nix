@@ -38,8 +38,9 @@
     (program "mpv")           # MPV (媒体播放器)
     (program "obs")           # OBS (视频录制/推流/虚拟摄像头)
     (program "spotify-player") # Spotify Player (Spotify TUI 前端)
-    (program "qimgv")         # qimgv (图像查看器)
     (program "clipse")        # Clipse (TUI 剪切板管理器)
+    (program "qimgv")         # qimgv (图像查看器)
+    (program "gimp")          # GIMP (图像编辑器)
   ];
 
   # Catppuccin

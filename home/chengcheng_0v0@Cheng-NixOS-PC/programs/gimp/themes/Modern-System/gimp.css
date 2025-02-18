@@ -1,0 +1,190 @@
+@define-color slider_col1 @theme_selected_bg_color;
+@define-color slider_col2 #7bff78;
+
+* {
+    -gtk-icon-style: symbolic;
+    -gimpdockwindow-default-height: 300;
+    -gimpmenudock-minimal-width: 200;
+    -gimpdockwindow-menu-preview-size: button;
+    -gimptoolpalette-tool-icon-size: large-toolbar;
+    -gimptoolpalette-button-relief: none;
+    -gimpdock-tool-icon-size: large-toolbar;
+    -gimpdockbook-tab-icon-size: button;
+    -gimpcolornotebook-tab-icon-size: button;
+    -gimpdockable-content-border: 2;
+    -gimpeditor-content-spacing: 2;
+    -gimpeditor-button-spacing: 2;
+    -gimpeditor-button-icon-size: menu;
+    -gimpdataeditor-minimal-height: 96;
+    -gtkdialog-content-area-border: 0;
+    -gtkdialog-button-spacing: 6;
+    -gtkdialog-action-area-border: 12;
+    -gimpunitcombobox-appears-as-list: 0;
+}
+
+GimpToolDialog {
+    -gtkdialog-action-area-border: 6;
+}
+
+GimpColorNotebook tab {
+    padding: 0 0 0 0;
+}
+
+/* Define colors so the nib handle appears in Gimp Ink Options */
+GimpBlobEditor {
+    color: @theme_fg_color;
+    background-color: @theme_bg_color;
+    border: 0.1em solid @theme_fg_color;
+}
+
+GimpDock entry,
+GimpDock spinbutton,
+GimpDock GimpColorNotebook spinbutton,
+GimpDock GimpColorNotebook spinbutton entry,
+GimpDock GimpColorScales spinbutton,
+GimpDock GimpColorScales spinbutton entry {
+    min-height: 0;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+GimpColorSelection ColorselCmyk {
+    padding: 2px 2px 2px 2px;
+}
+
+GimpColorHistory button {
+    padding: 3px 3px 3px 3px;
+}
+
+#gimp-color-tag-box button {
+    padding: 4px 6px 4px 6px;
+}
+
+tab GimpFgBgView {
+    padding: 6px 6px 6px 6px;
+}
+
+GimpFgBgEditor:active {
+    border-width: 2px 2px 2px 2px;
+}
+
+GimpDock notebook tab {
+    padding: 0 0 0 0;
+}
+
+GimpDock :not(toolbutton) > button,
+GimpOverlayDialog button,
+GimpToolDialog :not(headerbar) button,
+GimpTextStyleEditor button {
+    padding: 0px 2px 0px 2px;
+}
+
+GimpToolDialog headerbar {
+    min-height: 0;
+}
+
+GimpDock frame {
+    -gimpframe-label-bold: 0;
+    -gimpframe-label-spacing: 2;
+}
+
+GimpDisplayShell grid > button {
+    min-height: 0;
+    min-width: 0;
+    padding: 0 0 0 0;
+}
+
+GimpDisplayShell progressbar trough,
+GimpDisplayShell progressbar progress {
+    min-height: 1em;
+}
+
+GimpFileDialog progressbar trough,
+GimpFileDialog progressbar progress {
+    min-width: 1px; /* hack */
+    min-height: 1em;
+}
+
+spinbutton entry {
+    border-radius: 3px;
+}
+
+GimpSpinScale entry {
+    /* Important: prevent overhigh spin scale */
+    min-height: 16px;
+}
+
+GimpSpinScale entry progress {
+    background-color: @theme_selected_bg_color;
+    border-width: 0px;
+    border-radius: 3px;
+}
+
+GimpSpinScale button {
+    /* Makes the +- buttons a bit more compact. */
+    padding: 0 1px 0 1px;
+}
+
+entry.italic {
+    font-style: italic;
+}
+
+tooltip decoration {
+    box-shadow: 0px 0px;
+}
+
+treeview header button {
+    padding: 6px;
+}
+
+treeview .toggle-icon:not(.visible):hover {
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+
+treeview .toggle-icon:not(.visible):selected {
+    border-color: lightgray;
+}
+
+/************/
+/*  Slider  */
+/************/
+
+GimpSpinScale entry progress {
+    background-image: -gtk-gradient (linear, left top, right top, from (@slider_col1), to (@slider_col2));
+
+    border-width: 0px;
+    border-radius: 4px;
+}
+
+GimpSpinScale button {
+    /* Makes the +- buttons a bit more compact. */
+    padding: 0 1px 0 1px;
+}
+
+GimpSpinScale entry progress {
+    margin: -2px -6px;
+    background-color: transparent;
+    background-image: none;
+    border-radius: 0;
+    border-width: 0 0 2.5px;
+    border-color: @slider_col1;
+    border-style: solid;
+    box-shadow: none;
+}
+spinbutton:not(.vertical) progress:backdrop,
+entry progress:backdrop {
+    background-color: transparent;
+}
+.linked:not(.vertical) > spinbutton:focus:not(.vertical) + spinbutton:not(.vertical),
+.linked:not(.vertical) > spinbutton:focus:not(.vertical) + button,
+.linked:not(.vertical) > spinbutton:focus:not(.vertical) + combobox > box > button.combo,
+.linked:not(.vertical) > entry:focus + spinbutton:not(.vertical),
+.linked:not(.vertical) > entry:focus + button,
+.linked:not(.vertical) > entry:focus + combobox > box > button.combo,
+.linked:not(.vertical) > spinbutton:focus:not(.vertical) + entry,
+.linked:not(.vertical) > entry:focus + entry {
+    border-left-color: @slider_col1;
+}
+
+/* End */

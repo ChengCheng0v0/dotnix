@@ -43,6 +43,10 @@
     rustlings   # Rust 小练习
     tesseract   # OCR 引擎
     playerctl   # 播放控制器
+    (import (fetchTarball {
+      url = "https://github.com/jtojnar/nixpkgs/archive/gimp-meson.tar.gz";
+      sha256 = "100j46iv0cqlgbzv99kngf3254269m0dcbwnqfxdil8j5n2a83sl";
+    }) {}).gimp # 图像编辑器
 
     # 字体
     (import ./fonts/zcool-kuaile.nix { inherit stdenv lib; })
