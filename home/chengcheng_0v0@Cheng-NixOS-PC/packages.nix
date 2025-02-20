@@ -30,6 +30,7 @@
     sysz        # systemctl 的 Fzf TUI
     gpg-tui     # GnuPG 的 TUI 管理器
     clipse      # TUI 剪切板管理器
+    termscp     # TUI 文件传输工具
 
     # 媒体播放
     pavucontrol # 音频控制
