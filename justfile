@@ -47,7 +47,7 @@ rebuild-boot:
 
 # 加密机密
 encrypt-secret:
-  sudo SOPS_AGE_KEY_FILE=/var/lib/sops/age-key.txt sops --output ./secrets/default.json -e ./nixos/secrets/default.json
+  sudo SOPS_AGE_KEY_FILE=/var/lib/sops/age-key.txt sops --output ./secrets/default.json -e ./secrets/default.json
 
 # 解密机密
 decrypt-secret:
