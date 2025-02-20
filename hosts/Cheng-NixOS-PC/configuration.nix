@@ -34,7 +34,7 @@
     defaultSopsFile = ../../secrets/default.json;
     age = {
       keyFile = "/var/lib/sops/age-key.txt";
-      # sshKeyPaths = ["/etc/ssh/ssh_host_ed25519_key"];
+      # sshKeyPaths = [ "/etc/ssh/ssh_host_ed25519_key" ];
     };
 
     secrets = {

@@ -59,9 +59,9 @@
         ZCOOL Kuaile     => ./fonts/zcool-kuaile.nix
         Maple Mono SC NF => pkgs.maple-mono-SC-NF
       */
-      sansSerif = ["ZCOOL Kuaile"];
-      serif = ["ZCOOL Kuaile"];
-      monospace = ["Maple Mono SC NF"];
+      sansSerif = [ "ZCOOL Kuaile" ];
+      serif = [ "ZCOOL Kuaile" ];
+      monospace = [ "Maple Mono SC NF" ];
     };
   };
 
