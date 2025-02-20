@@ -48,6 +48,7 @@
       url = "https://github.com/jtojnar/nixpkgs/archive/gimp-meson.tar.gz";
       sha256 = "100j46iv0cqlgbzv99kngf3254269m0dcbwnqfxdil8j5n2a83sl";
     }) {}).gimp # 图像编辑器
+    sshfs       # SSH 文件系统
 
     # 字体
     (import ./fonts/zcool-kuaile.nix { inherit stdenv lib; })
