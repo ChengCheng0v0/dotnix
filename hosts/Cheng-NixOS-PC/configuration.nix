@@ -8,7 +8,7 @@
   nixpkgs.config.allowUnfree = true;
 
   imports = [
-    ./hardware_configuration.nix  # 硬件配置
+    ./hardware-configuration.nix  # 硬件配置
 
     ./users.nix                   # 用户配置
     ./packages.nix                # 系统软件包
