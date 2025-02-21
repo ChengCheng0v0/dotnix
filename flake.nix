@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     sops-nix.url = "github:Mic92/sops-nix/master";
+    disko.url = "github:nix-community/disko/master";
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -11,7 +12,7 @@
     catppuccin.url = "github:catppuccin/nix/main";
   };
 
-  outputs = inputs@{ self, nixpkgs, sops-nix, home-manager, catppuccin, ... }: {
+  outputs = inputs@{ self, nixpkgs, sops-nix, disko, home-manager, catppuccin, ... }: {
     nixosConfigurations = {
       Cheng-NixOS-PC = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -37,6 +38,16 @@
             };
           }
           catppuccin.nixosModules.catppuccin
+        ];
+      };
+      server-m710q = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; } // { vars = (import ./vars.nix).server-m710q; };
+        modules = [
+          ./hosts/server-m710q/configuration.nix
+
+          sops-nix.nixosModules.sops
+          disko.nixosModules.disko
         ];
       };
     };
