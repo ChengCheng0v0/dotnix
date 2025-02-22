@@ -10,8 +10,12 @@
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
 
-    ./disk-config.nix
-    ./hardware-configuration.nix
+    ./disk-config.nix             # 磁盘配置
+    ./hardware-configuration.nix  # 硬件配置
+
+    ./packages.nix                # 系统软件包
+
+    ../../share/programs/dae      # dae 代理配置
   ];
 
   # Nix 配置
@@ -61,10 +65,6 @@
     };
   };
 
-  # 代理
-  networking.proxy.default = "http://192.168.2.10:7890";
-  networking.proxy.noProxy = "127.0.0.1,localhost";
-
   # OpenSSH
   services.openssh = {
     enable = true;
@@ -73,14 +73,6 @@
       PasswordAuthentication = true;
     };
   };
-
-  # 系统软件包
-  environment.systemPackages = with pkgs; [
-    curl
-    git
-  ];
-
-  users.users.root.password = ":)";
 
   system.stateVersion = "25.05";
 }
