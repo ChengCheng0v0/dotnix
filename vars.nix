@@ -4,9 +4,9 @@
       chengcheng_0v0 = {
         wallpapers = {
           assetsPath.picture = "/etc/nixos/home/chengcheng_0v0@Cheng-NixOS-PC/desktop/wallpapers/picture";
-          linkTarget.picture = "Pictures/wallpapers";
+          linkTarget.picture = "Pictures/Wallpapers";
           assetsPath.video = "/etc/nixos/home/chengcheng_0v0@Cheng-NixOS-PC/desktop/wallpapers/video";
-          linkTarget.video = "Videos/wallpapers";
+          linkTarget.video = "Videos/Wallpapers";
         };
         waybar = {
           configPath = "/etc/nixos/home/chengcheng_0v0@Cheng-NixOS-PC/desktop/waybar/config";

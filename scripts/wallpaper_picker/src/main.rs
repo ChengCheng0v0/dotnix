@@ -6,7 +6,7 @@ use std::{
     process::{Command, Stdio},
 };
 
-const WALLPAPER_IMAGE_DIR: &str = "/home/chengcheng_0v0/Pictures/wallpapers";
+const WALLPAPER_IMAGE_DIR: &str = "/home/chengcheng_0v0/Pictures/Wallpapers";
 const TRANSITION_POSITIONS: [&str; 9] = [
     "center",
     "top",
