@@ -9,6 +9,9 @@
     sops        # 机密管理器
     jq          # JSON 处理器
 
+    # 终端工具
+    eza         # ls 替代品
+
     # 语言支持
     gcc         # GNU 编译器集合
     clang       # C 语言编译器

@@ -7,7 +7,12 @@
   # 允许非自由软件
   nixpkgs.config.allowUnfree = true;
 
-  imports = [
+  imports = let
+    share = name: ../../share/${name};
+    desktop = name: ./modules/desktop/${name};
+    program = name: ./modules/programs/${name};
+    service = name: ./modules/services/${name}.nix;
+  in [
     (modulesPath + "/installer/scan/not-detected.nix")
 
     ./disk-config.nix             # 磁盘配置
@@ -18,6 +23,8 @@
     ./programs.nix                # 系统应用程序
 
     ../../share/programs/dae      # dae 代理配置
+
+    (program "fish")              # Fish (交互式 Shell)
   ];
 
   # Nix 配置
