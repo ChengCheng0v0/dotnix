@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, vars, ... }:
 
 {
   # 主机名
@@ -26,7 +26,7 @@
 
     # https://github.com/shlevy/nix-plugins
     plugin-files = "${pkgs.nix-plugins}/lib/nix/plugins";
-    extra-builtins-file = [ "/etc/nixos/libs/extra-builtins.nix" ];
+    extra-builtins-file = [ "${vars.nixOsConfigPath}/libs/extra-builtins.nix" ];
   };
 
   # 机密配置

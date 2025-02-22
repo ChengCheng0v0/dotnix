@@ -1,11 +1,11 @@
-{ ... }:
+{ vars, ... }:
 
 {
   home.username = "chengcheng_0v0"; # 用户名
   home.homeDirectory = "/home/chengcheng_0v0"; # 家目录
 
   imports = let
-    share = name: /etc/nixos/share/${name};
+    share = name: "${vars.nixOsConfigPath}/share/${name}";
     desktop = name: ./desktop/${name};
     program = name: ./programs/${name};
     service = name: ./services/${name}.nix;
