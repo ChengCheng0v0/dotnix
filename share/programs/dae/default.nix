@@ -1,4 +1,4 @@
-{ ... }:
+{ vars, ... }:
 
 {
   services.dae = {
@@ -38,7 +38,7 @@
 
       group {
         proxy {
-          filter: name(keyword: "日本 03 | 深港专线")
+          filter: name(keyword: "${vars.dae.nodeName}")
           policy: fixed(0)
         }
       }

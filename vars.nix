@@ -1,6 +1,9 @@
 {
   hosts = {
     Cheng-NixOS-PC = {
+      dae = {
+        nodeName = "日本 03 | 深港专线";
+      };
       home = {
         chengcheng_0v0 = {
           wallpapers = {
