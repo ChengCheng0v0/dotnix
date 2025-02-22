@@ -1,28 +1,30 @@
 {
-  Cheng-NixOS-PC = {
-    home = {
-      chengcheng_0v0 = {
-        wallpapers = {
-          assetsPath.picture = "/etc/nixos/home/chengcheng_0v0@Cheng-NixOS-PC/desktop/wallpapers/picture";
-          linkTarget.picture = "Pictures/Wallpapers";
-          assetsPath.video = "/etc/nixos/home/chengcheng_0v0@Cheng-NixOS-PC/desktop/wallpapers/video";
-          linkTarget.video = "Videos/Wallpapers";
-        };
-        waybar = {
-          configPath = "/etc/nixos/home/chengcheng_0v0@Cheng-NixOS-PC/desktop/waybar/config";
-        };
-        fcitx = {
-          configPath = "/etc/nixos/home/chengcheng_0v0@Cheng-NixOS-PC/desktop/fcitx5/config";
-          rimeSharePath = "/etc/nixos/home/chengcheng_0v0@Cheng-NixOS-PC/desktop/fcitx5/share/rime";
-        };
-        nvim = {
-          configPath = "/etc/nixos/home/chengcheng_0v0@Cheng-NixOS-PC/programs/nvim/config";
-        };
-        qimgv = {
-          configPath = "/etc/nixos/home/chengcheng_0v0@Cheng-NixOS-PC/programs/qimgv/config";
+  hosts = {
+    Cheng-NixOS-PC = {
+      home = {
+        chengcheng_0v0 = {
+          wallpapers = {
+            assetsPath.picture = "/etc/nixos/home/chengcheng_0v0@Cheng-NixOS-PC/desktop/wallpapers/picture";
+            linkTarget.picture = "Pictures/Wallpapers";
+            assetsPath.video = "/etc/nixos/home/chengcheng_0v0@Cheng-NixOS-PC/desktop/wallpapers/video";
+            linkTarget.video = "Videos/Wallpapers";
+          };
+          waybar = {
+            configPath = "/etc/nixos/home/chengcheng_0v0@Cheng-NixOS-PC/desktop/waybar/config";
+          };
+          fcitx = {
+            configPath = "/etc/nixos/home/chengcheng_0v0@Cheng-NixOS-PC/desktop/fcitx5/config";
+            rimeSharePath = "/etc/nixos/home/chengcheng_0v0@Cheng-NixOS-PC/desktop/fcitx5/share/rime";
+          };
+          nvim = {
+            configPath = "/etc/nixos/home/chengcheng_0v0@Cheng-NixOS-PC/programs/nvim/config";
+          };
+          qimgv = {
+            configPath = "/etc/nixos/home/chengcheng_0v0@Cheng-NixOS-PC/programs/qimgv/config";
+          };
         };
       };
     };
+    server-m710q = {};
   };
-  server-m710q = {};
 }

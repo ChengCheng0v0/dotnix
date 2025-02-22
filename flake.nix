@@ -16,7 +16,7 @@
     nixosConfigurations = {
       Cheng-NixOS-PC = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = { inherit inputs; } // { vars = (import ./vars.nix).Cheng-NixOS-PC; };
+        specialArgs = { inherit inputs; } // { vars = (import ./vars.nix).hosts.Cheng-NixOS-PC; };
         modules = [
           ./hosts/Cheng-NixOS-PC/configuration.nix
 
@@ -25,7 +25,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              extraSpecialArgs = { inherit inputs; } // { vars = (import ./vars.nix).Cheng-NixOS-PC; };
+              extraSpecialArgs = { inherit inputs; } // { vars = (import ./vars.nix).hosts.Cheng-NixOS-PC; };
 
               sharedModules = [
                 inputs.sops-nix.homeManagerModules.sops
@@ -42,7 +42,7 @@
       };
       server-m710q = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = { inherit inputs; } // { vars = (import ./vars.nix).server-m710q; };
+        specialArgs = { inherit inputs; } // { vars = (import ./vars.nix).hosts.server-m710q; };
         modules = [
           ./hosts/server-m710q/configuration.nix
 
