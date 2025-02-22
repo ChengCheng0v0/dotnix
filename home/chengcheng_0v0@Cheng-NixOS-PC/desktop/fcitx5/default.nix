@@ -1,7 +1,6 @@
-{ config, pkgs, vars, ... }:
+{ config, pkgs, ... }:
 
 let
-  fcitx = vars.home.chengcheng_0v0.fcitx;
   rime-frost = with pkgs; (import ./packages/rime-frost.nix { inherit stdenv lib fetchFromGitHub librime; });
 in {
   i18n.inputMethod = {
@@ -22,7 +21,8 @@ in {
     flavor = "macchiato";
   };
 
-  xdg.configFile."fcitx5".source = config.lib.file.mkOutOfStoreSymlink fcitx.configPath;
-  xdg.dataFile."fcitx5/rime".source = "${rime-frost}/share/fcitx5/rime";
+  # xdg.configFile."fcitx5".source = config.lib.file.mkOutOfStoreSymlink "/etc/nixos/home/chengcheng_0v0@Cheng-NixOS-PC/desktop/fcitx5/config";
+  xdg.configFile."fcitx5".source = ./config;
   # xdg.dataFile."fcitx5/rime".source = config.lib.file.mkOutOfStoreSymlink fcitx.rimeSharePath;
+  xdg.dataFile."fcitx5/rime".source = "${rime-frost}/share/fcitx5/rime";
 }
