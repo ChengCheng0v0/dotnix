@@ -12,40 +12,41 @@
     catppuccin.url = "github:catppuccin/nix/main";
   };
 
-  outputs = inputs@{ self, nixpkgs, sops-nix, disko, home-manager, catppuccin, ... }: {
+  outputs = inputs@{ self, nixpkgs, sops-nix, disko, home-manager, catppuccin, ... }: let
+    mkSpecialArgs = { hostname, extra ? { } }: { inherit inputs; } // { vars = (import ./vars.nix).hosts.${hostname}; } // extra;
+    mkHost = { hostname, extraModules ? [ ], extraSpecialArgs ? { } }: nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      specialArgs = mkSpecialArgs { hostname = hostname; extra = extraSpecialArgs; };
+      modules = [ ./hosts/${hostname}/configuration.nix ] ++ extraModules;
+    };
+  in {
     nixosConfigurations = {
-      Cheng-NixOS-PC = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { inherit inputs; } // { vars = (import ./vars.nix).hosts.Cheng-NixOS-PC; };
-        modules = [
-          ./hosts/Cheng-NixOS-PC/configuration.nix
-
+      Cheng-NixOS-PC = mkHost rec {
+        hostname = "Cheng-NixOS-PC";
+        extraModules = [
           sops-nix.nixosModules.sops
+          catppuccin.nixosModules.catppuccin
+
           home-manager.nixosModules.home-manager {
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              extraSpecialArgs = { inherit inputs; } // { vars = (import ./vars.nix).hosts.Cheng-NixOS-PC; };
-
+              extraSpecialArgs = mkSpecialArgs { hostname = hostname; };
               sharedModules = [
-                inputs.sops-nix.homeManagerModules.sops
-                inputs.catppuccin.homeManagerModules.catppuccin
+                sops-nix.homeManagerModules.sops
+                catppuccin.homeManagerModules.catppuccin
               ];
-
               users = {
-                chengcheng_0v0 = import (./home + "/chengcheng_0v0@Cheng-NixOS-PC");
+                chengcheng_0v0 = import ("${./home}/chengcheng_0v0@${hostname}");
               };
             };
           }
-          catppuccin.nixosModules.catppuccin
         ];
       };
-      server-m710q = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { inherit inputs; } // { vars = (import ./vars.nix).hosts.server-m710q; };
-        modules = [
-          ./hosts/server-m710q/configuration.nix
 
+      server-m710q = mkHost {
+        hostname = "server-m710q";
+        extraModules = [
           sops-nix.nixosModules.sops
           disko.nixosModules.disko
         ];
