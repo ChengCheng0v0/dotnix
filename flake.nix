@@ -24,6 +24,8 @@
       Cheng-NixOS-PC = mkHost rec {
         hostname = "Cheng-NixOS-PC";
         extraModules = [
+          (import ./overlays)
+
           sops-nix.nixosModules.sops
           catppuccin.nixosModules.catppuccin
 

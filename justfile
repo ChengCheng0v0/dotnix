@@ -23,7 +23,6 @@ default:
 
 # 初始化
 init:
-  cd ./scripts/wallpaper_picker && cargo build --release
   @echo -e "\n{{GREEN}}Done!{{RESET}}"
 
 # 重新编译 NixOS

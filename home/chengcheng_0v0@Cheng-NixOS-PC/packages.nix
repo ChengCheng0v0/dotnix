@@ -2,6 +2,9 @@
 
 {
   home.packages = with pkgs; [
+    # dotnix
+    dotnix.wallpaper_picker # 壁纸选择器
+
     # 终端工具
     neofetch    # 经典身份证
     fastfetch   # 时尚身份证
