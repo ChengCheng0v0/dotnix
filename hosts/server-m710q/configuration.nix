@@ -15,6 +15,7 @@
 
     ./users.nix                   # 用户配置
     ./packages.nix                # 系统软件包
+    ./programs.nix                # 系统应用程序
 
     ../../share/programs/dae      # dae 代理配置
   ];
