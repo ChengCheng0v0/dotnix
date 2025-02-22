@@ -13,6 +13,7 @@
     ./disk-config.nix             # 磁盘配置
     ./hardware-configuration.nix  # 硬件配置
 
+    ./users.nix                   # 用户配置
     ./packages.nix                # 系统软件包
 
     ../../share/programs/dae      # dae 代理配置
