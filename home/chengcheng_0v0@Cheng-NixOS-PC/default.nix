@@ -1,10 +1,11 @@
-{ lib, pkgs, ... }:
+{ ... }:
 
 {
   home.username = "chengcheng_0v0"; # 用户名
   home.homeDirectory = "/home/chengcheng_0v0"; # 家目录
 
   imports = let
+    share = name: /etc/nixos/share/${name};
     desktop = name: ./desktop/${name};
     program = name: ./programs/${name};
     service = name: ./services/${name}.nix;
@@ -12,6 +13,8 @@
     ./packages.nix            # 用户软件包
     ./programs.nix            # 用户应用程序
     ./defapps.nix             # 默认应用配置
+
+    (share "programs/nvim")   # Neovim (代码编辑器)
 
     (service "clipse_listener") # Clipse 剪切板监听器
     (service "playerctld")    # playerctl 守护进程
@@ -29,7 +32,6 @@
     (program "git")           # Git (版本控制系统)
     (program "kitty")         # Kitty (终端模拟器)
     (program "fish")          # Fish (交互式 Shell)
-    (program "nvim")          # Neovim (代码编辑器)
     (program "yazi")          # Yazi (文件管理器)
     (program "lazygit")       # LazyGit (Git TUI)
     (program "prettier")      # Prettier (前端格式化工具)
