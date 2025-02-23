@@ -9,9 +9,8 @@
 
   imports = let
     share = name: ../../share/${name};
-    desktop = name: ./modules/desktop/${name};
-    program = name: ./modules/programs/${name};
     service = name: ./modules/services/${name}.nix;
+    program = name: ./modules/programs/${name};
   in [
     (modulesPath + "/installer/scan/not-detected.nix")
 
