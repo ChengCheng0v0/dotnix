@@ -4,6 +4,8 @@ configuration {
   font: "ZCOOL Kuaile 18";
   show-icons: true;
 
+  terminal: "kitty";
+
   kb-mode-next: "Shift+Right,Control+Tab,Tab";
   kb-element-next: "";
 
