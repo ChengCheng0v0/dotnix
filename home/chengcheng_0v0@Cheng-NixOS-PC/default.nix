@@ -6,9 +6,9 @@
 
   imports = let
     share = name: "${vars.nixOsConfigPath}/share/${name}";
+    service = name: ./services/${name}.nix;
     desktop = name: ./desktop/${name};
     program = name: ./programs/${name};
-    service = name: ./services/${name}.nix;
   in [
     ./packages.nix            # 用户软件包
     ./programs.nix            # 用户应用程序
@@ -42,6 +42,7 @@
     (program "clipse")        # Clipse (TUI 剪切板管理器)
     (program "qimgv")         # qimgv (图像查看器)
     (program "gimp")          # GIMP (图像编辑器)
+    (program "ssh")           # SSH (SSH 客户端)
   ];
 
   # Catppuccin
