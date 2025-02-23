@@ -7,7 +7,12 @@
   # 允许非自由软件
   nixpkgs.config.allowUnfree = true;
 
-  imports = [
+  imports = let
+    share = name: ../../share/${name};
+    security = name: ./modules/security/${name}.nix;
+    service = name: ./modules/services/${name}.nix;
+    program = name: ./modules/programs/${name};
+  in [
     ./hardware-configuration.nix  # 硬件配置
 
     ./users.nix                   # 用户配置
@@ -16,7 +21,9 @@
 
     ./modules/fhs_environment.nix # FHS 环境
 
-    ../../share/programs/dae      # dae 代理配置
+    (share "programs/dae")        # dae 代理配置
+
+    (security "sudo")             # sudo (Switch user, do it)
   ];
 
   # Nix 配置
