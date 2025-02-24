@@ -162,5 +162,8 @@
   fonts.fontconfig.enable = true;
   fonts.enableDefaultPackages = true;
 
+  # 启用 Electron 的 Wayland 支持
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
   system.stateVersion = "25.05";
 }

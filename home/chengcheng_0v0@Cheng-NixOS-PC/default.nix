@@ -67,14 +67,6 @@
     };
   };
 
-  # Electron 与 Wayland 的兼容性配置
-  home.sessionVariables.NIXOS_OZONE_WL = "1";
-  xdg.configFile."electron-flags.conf".text = ''
-    --enable-features=UseOzonePlatform
-    --ozone-platform=wayland
-    --enable-wayland-ime
-  '';
-
   home.stateVersion = "25.05";
   programs.home-manager.enable = true;
 }
