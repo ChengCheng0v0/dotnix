@@ -7,7 +7,10 @@
     unzip       # Zip 解压工具
     age         # 加密工具
     sops        # 机密管理器
+
+    # 终端工具
     jq          # JSON 处理器
+    choose      # 快速的 cut / awk 替代方案
 
     # 桌面环境
     hyprland    # 混成器/窗口管理器
