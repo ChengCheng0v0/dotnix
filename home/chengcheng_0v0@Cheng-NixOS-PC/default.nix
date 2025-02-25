@@ -34,7 +34,7 @@
     (program "fish")          # Fish (交互式 Shell)
     (program "yazi")          # Yazi (文件管理器)
     (program "lazygit")       # LazyGit (Git TUI)
-    (program "prettier")      # Prettier (前端格式化工具)
+    # (program "prettier")      # Prettier (前端格式化工具)
     (program "bat")           # Cat / Less 替代品
     (program "mpv")           # MPV (媒体播放器)
     (program "obs")           # OBS (视频录制/推流/虚拟摄像头)
