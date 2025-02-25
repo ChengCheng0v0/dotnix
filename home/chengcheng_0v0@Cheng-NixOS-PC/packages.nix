@@ -24,6 +24,7 @@
     # 开发工具
     commitizen  # Git 提交格式化工具
     just        # 命令执行器
+    beekeeper-studio # SQL 管理器
 
     # 实用工具
     nemo        # 文件管理器
