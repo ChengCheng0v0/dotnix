@@ -11,6 +11,7 @@
     eza         # ls 替代品
     nmap        # 网络安全工具
     zoxide      # 更智能的 cd
+    usql        # 通用的 SQL 命令行接口
 
     # 桌面环境
     swww        # 壁纸守护进程
