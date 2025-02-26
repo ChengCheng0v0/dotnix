@@ -64,6 +64,7 @@
   # 网络连接
   networking = {
     networkmanager.enable = true;
+    useDHCP = false;
 
     defaultGateway = "192.168.2.1";
     nameservers = [ "223.5.5.5" "1.1.1.1" "8.8.8.8" ];
