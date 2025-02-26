@@ -9,6 +9,7 @@
 
   imports = let
     share = name: ../../share/${name};
+    security = name: ./modules/security/${name}.nix;
     service = name: ./modules/services/${name}.nix;
     program = name: ./modules/programs/${name};
   in [
@@ -22,6 +23,9 @@
     ./programs.nix                # 系统应用程序
 
     ../../share/programs/dae      # dae 代理配置
+    (share "programs/dae")        # dae 代理配置
+
+    (security "sudo")             # sudo (Switch user, do it)
 
     (program "fish")              # Fish (交互式 Shell)
   ];
