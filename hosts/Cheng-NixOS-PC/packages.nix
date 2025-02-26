@@ -36,6 +36,7 @@
 
     # 其它
     caddy       # HTTP 服务器
+    gum         # 华丽的 Shell 脚本工具
   ];
 
   fonts.packages = with pkgs; [
