@@ -43,7 +43,6 @@
     vlc         # 视频播放器
 
     # 社交通讯
-    fluffychat  # 可爱的 Matrix 客户端
     ayugram-desktop # 第三方 Telegram 客户端
 
     # 其它
