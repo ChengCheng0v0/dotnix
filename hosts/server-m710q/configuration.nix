@@ -22,10 +22,11 @@
     ./packages.nix                # 系统软件包
     ./programs.nix                # 系统应用程序
 
-    ../../share/programs/dae      # dae 代理配置
     (share "programs/dae")        # dae 代理配置
 
     (security "sudo")             # sudo (Switch user, do it)
+
+    (service "postgresql")        # PostgreSQL (数据库)
 
     (program "fish")              # Fish (交互式 Shell)
   ];
