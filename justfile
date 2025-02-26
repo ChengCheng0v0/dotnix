@@ -52,3 +52,7 @@ encrypt-secret:
 decrypt-secret:
   sudo SOPS_AGE_KEY_FILE=/var/lib/sops/age-key.txt sops --output ./secrets/default.json -d ./secrets/default.json
   @echo -e "\n{{RED}}The secret is decrypted. Please don't forget to re-encrypt.{{RESET}}"
+
+# 重新编译并部署 NixOS
+deploy:
+  @./scripts/push_deploy.sh .
