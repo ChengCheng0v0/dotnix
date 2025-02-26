@@ -51,4 +51,9 @@
     noto-fonts-cjk-sans
     noto-fonts-cjk-serif
   ];
+
+  nixpkgs.config.permittedInsecurePackages = [
+    "fluffychat-linux-1.23.0"
+    "olm-3.2.16"
+  ];
 }
