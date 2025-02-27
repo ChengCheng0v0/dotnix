@@ -1,5 +1,5 @@
 {
-  description = "awa";
+  description = "ChengCheng's NixOS configuration! <3";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
