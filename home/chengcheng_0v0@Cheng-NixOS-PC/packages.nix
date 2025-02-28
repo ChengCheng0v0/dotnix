@@ -40,6 +40,7 @@
     # 媒体播放
     pavucontrol # 音频控制
     spotify     # 流媒体音乐
+    feishin     # 自托管音乐播放器
     vlc         # 视频播放器
 
     # 社交通讯
