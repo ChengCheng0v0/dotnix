@@ -26,6 +26,7 @@
 
     (security "sudo")             # sudo (Switch user, do it)
 
+    (service "netdata")           # Netdata (性能监测器)
     (service "postgresql")        # PostgreSQL (数据库)
     (service "pgadmin")           # pgAdmin (PostgreSQL 管理器)
 
