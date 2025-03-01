@@ -20,6 +20,9 @@
       (import ./config/keybinds.nix)
       # 窗口规则
       (import ./config/windowrules.nix)
+
+      # Electron 程序在 NVIDIA 显卡上的闪烁修复
+      (import ./config/nvidia_flicker_fix.nix)
     ];
   };
 }
