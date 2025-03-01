@@ -29,7 +29,6 @@
     beekeeper-studio # SQL 管理器
 
     # 实用工具
-    nemo        # 文件管理器
     pot         # 派了个萌的翻译器
     qimgv       # 图像查看器
     lnav        # 日志文件导航器

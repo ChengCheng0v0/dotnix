@@ -20,6 +20,6 @@
     "x-scheme-handler/https" = [ "firefox.desktop" ];
 
     # 文件管理器
-    "inode/directory" = [ "nemo.desktop" ];
+    "inode/directory" = [ "org.gnome.Nautilus.desktop" ];
   };
 }
