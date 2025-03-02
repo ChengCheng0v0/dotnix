@@ -68,7 +68,7 @@
     useDHCP = false;
 
     defaultGateway = "192.168.2.1";
-    nameservers = [ "223.5.5.5" "1.1.1.1" "8.8.8.8" ];
+    nameservers = [ "223.5.5.5" "1.1.1.1" "2400:3200::1" "2606:4700:4700::1111" ];
     interfaces.enp0s31f6 = {
       ipv4.addresses = [
         {
