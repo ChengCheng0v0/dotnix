@@ -51,6 +51,9 @@
       "gitCredentials/chengcheng_0v0/host" = {};
       "gitCredentials/chengcheng_0v0/username" = {};
       "gitCredentials/chengcheng_0v0/password" = {};
+
+      "navidrome/lastFM/apiKey" = {};
+      "navidrome/lastFM/apiSecret" = {};
     };
   };
 
