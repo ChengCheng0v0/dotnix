@@ -26,6 +26,7 @@
 
     (security "sudo")             # sudo (Switch user, do it)
 
+    (service "ddclient")          # DDClient (DDNS 客户端)
     (service "netdata")           # Netdata (性能监测器)
     (service "postgresql")        # PostgreSQL (数据库)
     (service "pgadmin")           # pgAdmin (PostgreSQL 管理器)
@@ -52,7 +53,9 @@
       sshKeyPaths = [ "/etc/ssh/ssh_host_ed25519_key" ];
     };
 
-    secrets = {};
+    secrets = {
+      "ddclient/cloudflare/password" = {};
+    };
   };
 
   # Bootloader
