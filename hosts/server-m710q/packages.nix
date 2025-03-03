@@ -25,7 +25,7 @@
     git         # 版本控制系统
 
     # 网络服务
-    caddy       # HTTP 服务器
+    # caddy       # HTTP 服务器
 
     # 其它
     kitty       # 终端模拟器

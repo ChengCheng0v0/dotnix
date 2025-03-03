@@ -52,6 +52,8 @@
       "gitCredentials/chengcheng_0v0/username" = {};
       "gitCredentials/chengcheng_0v0/password" = {};
 
+      "caddy/cloudflare/apiToken" = {};
+
       "navidrome/lastFM/apiKey" = {};
       "navidrome/lastFM/apiSecret" = {};
     };

@@ -27,6 +27,7 @@
     (security "sudo")             # sudo (Switch user, do it)
 
     (service "ddclient")          # DDClient (DDNS 客户端)
+    (service "caddy")             # Caddy (HTTP 服务器)
     (service "netdata")           # Netdata (性能监测器)
     (service "postgresql")        # PostgreSQL (数据库)
     (service "pgadmin")           # pgAdmin (PostgreSQL 管理器)
