@@ -26,11 +26,14 @@
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
-    "/mnt/files" = {
+    "/home/chengcheng_0v0/data" = {
       device = "/dev/disk/by-uuid/4a0f26fa-3cf5-4ee2-a555-3f45c59446b1";
       fsType = "btrfs";
     };
   };
+  systemd.tmpfiles.rules = [
+    "d /home/chengcheng_0v0/data 0755 chengcheng_0v0 users -"
+  ];
 
   # Swap
   swapDevices = [
