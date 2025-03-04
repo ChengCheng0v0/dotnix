@@ -31,6 +31,7 @@
     (service "netdata")           # Netdata (性能监测器)
     (service "postgresql")        # PostgreSQL (数据库)
     (service "pgadmin")           # pgAdmin (PostgreSQL 管理器)
+    (service "n8n")               # n8n (自动化平台)
     (service "navidrome")         # Navidrome (流媒体音乐服务)
 
     (program "fish")              # Fish (交互式 Shell)

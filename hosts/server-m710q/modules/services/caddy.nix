@@ -41,6 +41,16 @@
         reverse_proxy :5050
       }
 
+      # n8n
+      flows.hic.top {
+        tls {
+          dns cloudflare "${cfToken}"
+          resolvers 1.1.1.1
+        }
+
+        reverse_proxy :5678
+      }
+
       # Navidrome
       mlib.hic.top {
         tls {

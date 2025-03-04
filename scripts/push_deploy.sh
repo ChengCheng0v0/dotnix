@@ -12,7 +12,7 @@ fi
 hosts=(
   "Localhost %   % Self % localhost"
   "Cheng-NixOS-PC %   % Home | PC % root@192.168.2.2"
-  "server-m710q %   % Home | PostgreSQL,pgAdmin,Navidrome % root@192.168.2.3"
+  "server-m710q %   % Home | PostgreSQL,pgAdmin,n8n,Navidrome % root@192.168.2.3"
   "vps-vmiss-79676 %   % CN.HK.BGP.V2.Basic | hic.top % root@vps-vmiss-79676"
 )
 
