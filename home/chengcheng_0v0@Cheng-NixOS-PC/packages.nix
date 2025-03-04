@@ -20,6 +20,7 @@
     fastfetch   # 时尚身份证
     eza         # ls 替代品
     nmap        # 网络安全工具
+    dig         # DNS 查询工具
     zoxide      # 更智能的 cd
     thefuck     # 爆炒命令行
     lnav        # 日志文件导航器
