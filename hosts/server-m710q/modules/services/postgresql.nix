@@ -9,9 +9,10 @@
       listen_addresses = lib.mkForce "*";
     };
 
-    ensureDatabases = [ "test" ];
+    ensureDatabases = [ "test" "hic_n8n" ];
     ensureUsers = [
       { name = "test"; }
+      { name = "hic_n8n"; }
     ];
     authentication = ''
       host  all  all  0.0.0.0/0  md5
