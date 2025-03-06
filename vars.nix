@@ -8,7 +8,7 @@ rec {
       nixOsConfigPath = defaults.nixOsConfigPath;
 
       dae = {
-        nodeName = "日本 03 | 深港专线";
+        nodeName = "新加坡 02 | 深港专线";
       };
 
       home = {
