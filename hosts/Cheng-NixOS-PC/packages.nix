@@ -4,6 +4,7 @@
   environment.systemPackages = with pkgs; [
     # 系统工具
     wget        # 从互联网获取文件
+    aria2       # 多线程下载器
     unzip       # Zip 解压工具
     age         # 加密工具
     sops        # 机密管理器
