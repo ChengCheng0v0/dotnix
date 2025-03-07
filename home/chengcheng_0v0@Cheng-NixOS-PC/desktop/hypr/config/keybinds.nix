@@ -7,7 +7,7 @@
     "$mainMod, E, exec, $file_manager"
     "$mainMod SHIFT, E, exec, $gui_file_manager"
     "$mainMod SHIFT, W, exec, $wp_picker"
-    "$mainMod, Q, exec, $region_screenshot /mnt/files/屏幕截图"
+    "$mainMod, Q, exec, $region_screenshot ~/data/Screenshot"
 
     "$mainMod, A, exec, curl http://127.0.0.1:60828/input_translate"
     "CTRL SHIFT, A, exec, curl http://127.0.0.1:60828/selection_translate"
