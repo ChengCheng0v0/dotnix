@@ -60,6 +60,7 @@
 
     # 字体
     (import ./fonts/zcool-kuaile.nix { inherit stdenv lib; })
+    (import ./fonts/fzmiaowu.nix { inherit stdenv lib; })
 
     # 光标主题
     bibata-cursors

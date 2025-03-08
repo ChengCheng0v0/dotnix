@@ -58,8 +58,9 @@
       /*
         [ Font Name ]    => [ Source ]
         --------------------------------------------
-        ZCOOL Kuaile     => ./fonts/zcool-kuaile.nix
+        方正喵呜体       => ./fonts/fzmiaowu.nix
         Maple Mono SC NF => pkgs.maple-mono-SC-NF
+        ZCOOL Kuaile     => ./fonts/zcool-kuaile.nix
       */
       sansSerif = [ "ZCOOL Kuaile" ];
       serif = [ "ZCOOL Kuaile" ];
