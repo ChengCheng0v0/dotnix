@@ -1,4 +1,6 @@
 {
+  "reload_style_on_change": true,
+
   "layer": "top",
   "position": "top",
   "height": 26,
@@ -53,7 +55,10 @@
       "playing": "",
       "paused": "▶",
     },
-    "ignored-players": ["zen-browser", "firefox"],
+    "ignored-players": [],
+
+    "on-click-forward": "playerctld shift",
+    "on-click-backward": "playerctld unshift",
   },
   "wlr/taskbar": {
     "format": "{icon} {title}",
@@ -84,8 +89,6 @@
       "default": [" ", " ", "<span color='#f38ba8'>   DANGER!</span>"],
     },
     "on-click": "pavucontrol",
-    "on-click-forward": "playerctld shift",
-    "on-click-backward": "playerctld unshift",
   },
   "power-profiles-daemon": {
     "format": "{icon}",
@@ -135,17 +138,5 @@
       "locked": "",
       "unlocked": "",
     },
-  },
-  "custom/media": {
-    "format": "{icon} {text}",
-    "return-type": "json",
-    "max-length": 40,
-    "format-icons": {
-      "spotify": "",
-      "default": "🎜",
-    },
-    "escape": true,
-    "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null", // Script in resources folder
-    // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
   },
 }

@@ -1,14 +1,14 @@
 * {
-    font-family:
-        FontAwesome,
-        ZCOOL KuaiLe,
-        sans-serif;
-    font-size: 14px;
+  font-family:
+    FontAwesome,
+    ZCOOL KuaiLe,
+    sans-serif;
+  font-size: 14px;
 }
 
 window#waybar {
-    background-color: rgba(0, 0, 0, 0);
-    color: #f5c2e7;
+  background-color: transparent;
+  color: #f5c2e7;
 }
 
 #workspaces,
@@ -23,35 +23,34 @@ window#waybar {
 #power-profiles-daemon,
 #keyboard-state,
 #mpris {
-    padding: 0 10px;
-    border-radius: 10px;
-    border: 2px solid #f5c2e7;
-    background-color: #313244;
+  padding: 2px 10px 0 10px;
+  border-radius: 10px 10px 2px 2px;
+  border-bottom: 2px solid #f5c2e7;
+  background-color: #313244;
 }
 
 #workspaces button {
-    padding: 0 6px;
-    border-radius: 100%;
-    color: #f5c2e7;
+  padding: 0 6px;
+  border-radius: 100%;
+  color: #f5c2e7;
 }
 #workspaces button + button {
-    margin-left: 2px;
+  margin-left: 2px;
 }
 #workspaces button.active {
-    color: #f9e2af;
+  color: #f9e2af;
 }
 
 #window {
-    margin: 0 24px;
-    padding: 0 10px;
+  margin: 0 24px;
 }
 
 #power-profiles-daemon.performance {
-    color: #f38ba8;
+  color: #f38ba8;
 }
 #power-profiles-daemon.balanced {
-    color: #f5c2e7;
+  color: #f5c2e7;
 }
 #power-profiles-daemon.power-saver {
-    color: #89b4fa;
+  color: #89b4fa;
 }
