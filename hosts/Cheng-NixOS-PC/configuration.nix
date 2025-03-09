@@ -105,6 +105,19 @@
     };
   };
 
+  # X Server
+  services.xserver.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+
+  # GNOME
+  services.xserver.desktopManager.gnome.enable = true;
+
+  # Hyprland
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
+
   # 本地化
   time.timeZone = "Asia/Shanghai";
   i18n = {
@@ -122,27 +135,11 @@
     };
   };
 
-  # X Server
-  services.xserver.enable = true;
-  services.xserver.displayManager.gdm.enable = true;
-
-  # GNOME
-  services.xserver.desktopManager.gnome.enable = true;
-
-  # Hyprland
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-  };
-
   # 键盘布局
   services.xserver.xkb = {
     layout = "us";
     variant = "";
   };
-
-  # 启用 OpenTabletDriver
-  hardware.opentabletdriver.enable = true;
 
   # 音频服务
   hardware.pulseaudio.enable = false;
@@ -169,6 +166,14 @@
 
   # 启用 Electron 的 Wayland 支持
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
+  # 启用 OpenTabletDriver
+  hardware.opentabletdriver.enable = true;
+
+  # Docker
+  virtualisation.docker = {
+    enable = true;
+  };
 
   system.stateVersion = "25.05";
 }
