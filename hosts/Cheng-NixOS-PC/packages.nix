@@ -2,6 +2,14 @@
 
 {
   environment.systemPackages = with pkgs; [
+    # 语言支持
+    gcc         # GNU 编译器集合
+    clang       # C 语言编译器
+    rustc       # Rust 语言编译器
+    cargo       # Rust 的包管理器
+    python314   # Python 3.14
+    nodejs_23   # Node.js 23
+
     # 系统工具
     wget        # 从互联网获取文件
     aria2       # 多线程下载器
@@ -21,15 +29,6 @@
     rofi        # 程序启动器
     gtk3        # GTK 3
     gtk4        # GTK 4
-
-    # 语言支持
-    gcc         # GNU 编译器集合
-    clang       # C 语言编译器
-    rustc       # Rust 语言编译器
-    cargo       # Rust 的包管理器
-    python314   # Python 3.14
-    nodejs_23   # Node.js 23
-    fish-lsp    # Fish 语言服务器
 
     # 开发工具
     neovim      # 代码编辑器
