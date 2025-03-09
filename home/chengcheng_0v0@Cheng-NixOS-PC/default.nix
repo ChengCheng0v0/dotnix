@@ -43,6 +43,7 @@
     (program "qimgv")         # qimgv (图像查看器)
     (program "gimp")          # GIMP (图像编辑器)
     (program "ssh")           # SSH (SSH 客户端)
+    (program "direnv")        # direnv (目录环境变量)
   ];
 
   # Catppuccin
