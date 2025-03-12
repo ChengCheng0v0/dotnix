@@ -16,6 +16,7 @@
     unzip       # Zip 解压工具
     age         # 加密工具
     sops        # 机密管理器
+    ntfs3g      # NTFS 工具
 
     # 终端工具
     jq          # JSON 处理器
