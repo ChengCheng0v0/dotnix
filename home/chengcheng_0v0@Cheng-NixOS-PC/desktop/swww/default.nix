@@ -46,10 +46,10 @@ in {
   };
 
   # 时间到达早上 (7:00) 时设置壁纸
-  systemd.user.services.swww-set-at-time-morning = mkSetAtTime.service "morning";
-  systemd.user.timers.swww-set-at-time-morning = mkSetAtTime.timer "morning" "7:00:00";
+  # systemd.user.services.swww-set-at-time-morning = mkSetAtTime.service "morning";
+  # systemd.user.timers.swww-set-at-time-morning = mkSetAtTime.timer "morning" "7:00:00";
 
   # 时间到达夜晚 (19:00) 时设置壁纸
-  systemd.user.services.swww-set-at-time-night = mkSetAtTime.service "night";
-  systemd.user.timers.swww-set-at-time-night = mkSetAtTime.timer "night" "19:00:00";
+  # systemd.user.services.swww-set-at-time-night = mkSetAtTime.service "night";
+  # systemd.user.timers.swww-set-at-time-night = mkSetAtTime.timer "night" "19:00:00";
 }
