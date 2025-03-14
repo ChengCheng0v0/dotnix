@@ -3,7 +3,6 @@
 {
   environment.systemPackages = with pkgs; [
     # 语言支持
-    pkg-config  # pkg-config 工具
     gcc         # GNU 编译器集合
     clang       # C 语言编译器
     rustc       # Rust 语言编译器
