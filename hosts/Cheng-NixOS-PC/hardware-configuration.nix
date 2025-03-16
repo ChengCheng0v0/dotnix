@@ -30,6 +30,10 @@
       device = "/dev/disk/by-uuid/4a0f26fa-3cf5-4ee2-a555-3f45c59446b1";
       fsType = "btrfs";
     };
+    "/home/chengcheng_0v0/games" = {
+      device = "/dev/disk/by-uuid/47b3dcc0-2d76-4920-95c5-347bc5e44786";
+      fsType = "btrfs";
+    };
   };
   systemd.tmpfiles.rules = [
     "d /home/chengcheng_0v0/data 0755 chengcheng_0v0 users -"

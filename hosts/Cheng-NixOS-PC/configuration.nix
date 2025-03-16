@@ -24,6 +24,8 @@
     (share "programs/dae")        # dae 代理配置
 
     (security "sudo")             # sudo (Switch user, do it)
+
+    (program "steam")             # Steam (游戏平台)
   ];
 
   # Nix 配置
