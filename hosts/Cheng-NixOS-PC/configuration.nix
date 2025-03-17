@@ -26,6 +26,7 @@
     (security "sudo")             # sudo (Switch user, do it)
 
     (program "steam")             # Steam (游戏平台)
+    (program "gamescope")         # Gamescope (SteamOS 环境)
   ];
 
   # Nix 配置
