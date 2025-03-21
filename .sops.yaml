@@ -1,13 +1,13 @@
 keys:
-    # AGE
-    - &admin_chengcheng_0v0 age1v35c8pstlm756dj5dsyu0qf7em8vcj4hsxc7cl26n43cmrzgyfyq0zj66v
+  # AGE
+  - &admin_chengcheng_0v0 age1v35c8pstlm756dj5dsyu0qf7em8vcj4hsxc7cl26n43cmrzgyfyq0zj66v
 
-    # SSH
-    - &server_m710q age1d82lpz0kxdacfzfv88e5mjpyru7s0fh0jwk73ushr08u9g6k8exsppw38s
+  # SSH
+  - &server_m710q age1dlzqx8gfvjhgft03xxtm2nm5htqy8yzq2n0fueal27fue4p6jgxsdd7chy
 
 creation_rules:
-    - path_regex: secrets/[^/]+\.(yaml|json|env|ini|nix)$
-      key_groups:
-          - age:
-                - *admin_chengcheng_0v0
-                - *server_m710q
+  - path_regex: secrets/[^/]+\.(yaml|json|env|ini|nix)$
+    key_groups:
+      - age:
+          - *admin_chengcheng_0v0
+          - *server_m710q

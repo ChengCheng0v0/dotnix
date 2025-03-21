@@ -15,7 +15,6 @@
   in [
     (modulesPath + "/installer/scan/not-detected.nix")
 
-    ./disk-config.nix             # 磁盘配置
     ./hardware-configuration.nix  # 硬件配置
 
     ./users.nix                   # 用户配置
@@ -41,10 +40,6 @@
   nix.settings = {
     # 启用实验性功能
     experimental-features = [ "nix-command" "flakes" ];
-
-    # https://github.com/shlevy/nix-plugins
-    plugin-files = "${pkgs.nix-plugins}/lib/nix/plugins";
-    extra-builtins-file = [ "${vars.nixOsConfigPath}/libs/extra-builtins.nix" ];
   };
 
   # 机密配置
@@ -63,8 +58,8 @@
   # Bootloader
   boot.loader.grub = {
     # devices = [ ];
-    efiSupport = true;
-    efiInstallAsRemovable = true;
+    efiSupport = false;
+    efiInstallAsRemovable = false;
   };
 
   # 网络连接
@@ -77,7 +72,7 @@
     interfaces.enp0s31f6 = {
       ipv4.addresses = [
         {
-          address = "192.168.2.3";
+          address = "192.168.2.201";
           prefixLength = 24;
         }
       ];
@@ -88,8 +83,9 @@
   services.openssh = {
     enable = true;
     settings = {
-      PermitRootLogin = "yes";
-      PasswordAuthentication = true;
+      # PermitRootLogin = "yes";
+      # PasswordAuthentication = true;
+      PubkeyAuthentication = true;
     };
   };
 
