@@ -2,7 +2,7 @@
 
 {
   # 主机名
-  networking.hostName = "server-m710q";
+  networking.hostName = "vm-m710q-server";
 
   # 允许非自由软件
   nixpkgs.config.allowUnfree = true;

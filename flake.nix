@@ -46,8 +46,8 @@
         ];
       };
 
-      server-m710q = mkHost {
-        hostname = "server-m710q";
+      vm-m710q-server = mkHost {
+        hostname = "vm-m710q-server";
         extraModules = [
           sops-nix.nixosModules.sops
           disko.nixosModules.disko

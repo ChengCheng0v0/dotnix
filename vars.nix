@@ -20,7 +20,7 @@ rec {
         };
       };
     };
-    server-m710q = {
+    vm-m710q-server = {
       nixOsConfigPath = defaults.nixOsConfigPath;
 
       dae = {

@@ -2,9 +2,9 @@
   programs.ssh = {
     enable = true;
 
-    matchBlocks.server-m710q = {
-      host = "server-m710q";
-      hostname = "192.168.2.3";
+    matchBlocks.vm-m710q-server = {
+      host = "vm-m710q-server";
+      hostname = "192.168.2.201";
       user = "chengcheng_0v0";
     };
   };
